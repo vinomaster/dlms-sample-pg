@@ -5,7 +5,7 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Stack: PostgreSQL + OpenSearch](https://img.shields.io/badge/Stack-PostgreSQL%20%2B%20OpenSearch-orange)](https://github.com/discoverfinancial/dlms-server-pg/blob/main/decisions/ADR-001-POLYGLOT.md)
 
-A complete, working sample application built on the [dlms-server-pg](https://github.com/discoverfinancial/dlms-server-pg) polyglot architecture. It replicates the Team Outing Planner from the original [dlms-sample](https://github.com/discoverfinancial/dlms-sample) — with identical UX and REST API — while replacing MongoDB with **Amazon RDS PostgreSQL + OpenSearch + S3**.
+A complete, working sample application built on the [dlms-server-pg](https://github.com/vinomaster/dlms-server-pg) polyglot architecture. It replicates the Team Outing Planner from the original [dlms-sample](https://github.com/discoverfinancial/dlms-sample) — with identical UX and REST API — while replacing MongoDB with **Amazon RDS PostgreSQL + OpenSearch + S3**.
 
 ---
 
