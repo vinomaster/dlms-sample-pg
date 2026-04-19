@@ -1,0 +1,49 @@
+{
+  "name": "dlms-sample-pg-code",
+  "version": "1.0.0",
+  "description": "Team Outing Planner – DLMS sample app on AWS Polyglot stack",
+  "private": true,
+  "scripts": {
+    "build": "npm run build:server && npm run build:client",
+    "build:server": "tsc -p tsconfig.server.json",
+    "build:client": "react-scripts build",
+    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
+    "dev:server": "ts-node-dev --respawn --transpile-only src/server/server.ts",
+    "dev:client": "REACT_APP_API_URL=http://localhost:4000 react-scripts start",
+    "start": "node build/server/server.js",
+    "test": "react-scripts test --watchAll=false",
+    "puml": "ts-node src/server/puml.ts",
+    "clean": "rm -rf build"
+  },
+  "dependencies": {
+    "dlms-base-pg": "^1.0.0",
+    "dlms-server-pg": "^1.0.0",
+    "@aws-sdk/client-s3": "^3.600.0",
+    "@opensearch-project/opensearch": "^2.7.0",
+    "axios": "^1.7.2",
+    "concurrently": "^8.2.2",
+    "express": "^4.19.2",
+    "pg": "^8.11.5",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-router-dom": "^6.23.1",
+    "react-scripts": "5.0.1",
+    "typescript": "^5.4.5",
+    "winston": "^3.13.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.14.2",
+    "@types/pg": "^8.11.6",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@types/react-router-dom": "^5.3.3",
+    "ts-node-dev": "^2.0.0"
+  },
+  "browserslist": {
+    "production": [">0.2%", "not dead", "not op_mini all"],
+    "development": ["last 1 chrome version", "last 1 firefox version", "last 1 safari version"]
+  },
+  "proxy": "http://localhost:4000",
+  "license": "MIT"
+}

@@ -1,0 +1,19 @@
+{
+  "name": "dlms-sample-pg",
+  "version": "1.0.0",
+  "description": "DLMS Sample Application – Team Outing Planner (AWS Polyglot edition)",
+  "private": true,
+  "workspaces": ["code"],
+  "scripts": {
+    "install:all": "npm install",
+    "build": "npm run build --workspace=code",
+    "dev": "npm run dev --workspace=code",
+    "start": "npm run start --workspace=code",
+    "test": "npm run test --workspace=code --if-present",
+    "docker:build": "docker build -t dlms-sample-pg ./code",
+    "docker:run": "docker run --env-file code/.env -p 4000:4000 dlms-sample-pg",
+    "compose:up": "docker compose up -d",
+    "compose:down": "docker compose down"
+  },
+  "license": "MIT"
+}

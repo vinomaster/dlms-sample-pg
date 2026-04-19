@@ -1,0 +1,90 @@
+version: "3.9"
+
+# Full local development stack for dlms-sample-pg.
+# Inherits database services; adds the sample app container.
+# Run:  docker compose up -d
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: dlms-sample-postgres
+    environment:
+      POSTGRES_USER: dlms
+      POSTGRES_PASSWORD: dlms
+      POSTGRES_DB: dlms
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U dlms"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  opensearch:
+    image: opensearchproject/opensearch:2.13.0
+    container_name: dlms-sample-opensearch
+    environment:
+      - discovery.type=single-node
+      - plugins.security.disabled=true
+      - OPENSEARCH_JAVA_OPTS=-Xms512m -Xmx512m
+    ports:
+      - "9200:9200"
+    volumes:
+      - osdata:/usr/share/opensearch/data
+    healthcheck:
+      test: ["CMD-SHELL", "curl -sf http://localhost:9200/_cluster/health | grep -q '\"status\":\"green\\|yellow\"'"]
+      interval: 15s
+      timeout: 10s
+      retries: 10
+
+  localstack:
+    image: localstack/localstack:3.4
+    container_name: dlms-sample-localstack
+    ports:
+      - "4566:4566"
+    environment:
+      - SERVICES=s3
+      - AWS_DEFAULT_REGION=us-east-1
+    volumes:
+      - localstackdata:/var/lib/localstack
+      - ./scripts/localstack-init.sh:/etc/localstack/init/ready.d/init.sh:ro
+
+  app:
+    build:
+      context: ./code
+      dockerfile: Dockerfile
+    container_name: dlms-sample-app
+    ports:
+      - "4000:4000"
+    environment:
+      - NODE_ENV=development
+      - PORT=4000
+      - PG_HOST=postgres
+      - PG_PORT=5432
+      - PG_DB=dlms
+      - PG_USER=dlms
+      - PG_PASS=dlms
+      - OPENSEARCH_ENDPOINT=http://opensearch:9200
+      - ATTACHMENTS_BUCKET=dlms-attachments
+      - BACKUP_BUCKET=dlms-backups
+      - S3_ENDPOINT=http://localstack:4566
+      - AWS_REGION=us-east-1
+      - AWS_ACCESS_KEY_ID=test
+      - AWS_SECRET_ACCESS_KEY=test
+      - BASIC_AUTH_ENABLED=true
+      - IDS_ADMIN=admin
+      - API_TOKEN=dev-token
+    depends_on:
+      postgres:
+        condition: service_healthy
+      opensearch:
+        condition: service_healthy
+      localstack:
+        condition: service_started
+
+volumes:
+  pgdata:
+  osdata:
+  localstackdata:
