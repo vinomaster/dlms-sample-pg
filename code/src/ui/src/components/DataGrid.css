@@ -1,0 +1,77 @@
+.ag-theme-alpine {
+    --ag-header-foreground-color: var(--on-Slate-0);
+    --ag-header-background-color: var(--Slate-0);
+    --ag-header-column-separator-display: white;
+    --ag-font-size: var(--baseFont);
+    --ag-header-font-weight: 700;
+    --ag-font-weight: 400;
+    --ag-header-height: 56px;
+    --ag-font-family: var(--primaryFont);
+    --ag-input-border-color: var(--border);
+    --ag-cell-horizontal-border: solid white;
+    --ag-row-border-color: white;
+    --ag-background-color: #f8f8f8; /* #dedede;*/
+    --ag-odd-row-background-color: white; /* #dedede; */
+    --ag-row-hover-color: var(--Slate-0);
+    --ag-grid-size1: 10px;
+    --ag-row-height: 50px;
+    --ag-cell-horizontal-padding: 10px;
+    --ag-side-button-selected-background-color: rgb(228, 197, 203);
+    --ag-side-bar-panel-width: 300px;
+    --ag-header-column-resize-handle-display: none;
+}
+.ag-theme-alpine .ag-layout-auto-height .ag-center-cols-clipper,
+.ag-theme-alpine .ag-layout-auto-height .ag-center-cols-container,
+.ag-theme-alpine .ag-layout-print .ag-center-cols-clipper,
+.ag-theme-alpine .ag-layout-print .ag-center-cols-container,
+.ag-theme-alpine-dark .ag-layout-auto-height .ag-center-cols-clipper,
+.ag-theme-alpine-dark .ag-layout-auto-height .ag-center-cols-container,
+.ag-theme-alpine-dark .ag-layout-print .ag-center-cols-clipper,
+.ag-theme-alpine-dark .ag-layout-print .ag-center-cols-container {
+    min-height: 50px;
+}
+.ag-theme-alpine .ag-row {
+    font-size: var(--baseFont);
+}
+.ag-header-row-column-filter {
+    background-color: white;
+    color: black;
+}
+.ag-header-cell {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.ag-header-cell-label {
+    justify-content: center;
+}
+.ag-header-icon {
+    color: white;
+}
+.ag-ltr .ag-floating-filter-button {
+    margin-left: 1px;
+    color: black;
+}
+.ag-root-wrapper {
+    border-radius: 12px;
+}
+input[class^='ag-']:not([type]),
+input[class^='ag-'][type='text'],
+input[class^='ag-'][type='number'],
+input[class^='ag-'][type='tel'],
+input[class^='ag-'][type='date'],
+input[class^='ag-'][type='datetime-local'],
+textarea[class^='ag-'] {
+    color: black;
+    background-color: white;
+}
+.center-text {
+    text-align: center;
+}
+.MuiTooltip-tooltip {
+    padding: 10px;
+    max-width: 730px !important;
+}
+.ag-floating-filter-button-button {
+    background-color: transparent !important;
+    color: inherit !important;
+}

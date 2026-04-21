@@ -1,49 +1,49 @@
 {
-  "name": "dlms-sample-pg-code",
-  "version": "1.0.0",
-  "description": "Team Outing Planner – DLMS sample app on AWS Polyglot stack",
-  "private": true,
-  "scripts": {
-    "build": "npm run build:server && npm run build:client",
-    "build:server": "tsc -p tsconfig.server.json",
-    "build:client": "react-scripts build",
-    "dev": "concurrently \"npm run dev:server\" \"npm run dev:client\"",
-    "dev:server": "ts-node-dev --respawn --transpile-only src/server/server.ts",
-    "dev:client": "REACT_APP_API_URL=http://localhost:4000 react-scripts start",
-    "start": "node build/server/server.js",
-    "test": "react-scripts test --watchAll=false",
-    "puml": "ts-node src/server/puml.ts",
-    "clean": "rm -rf build"
-  },
-  "dependencies": {
-    "dlms-base-pg": "^1.0.0",
-    "dlms-server-pg": "^1.0.0",
-    "@aws-sdk/client-s3": "^3.600.0",
-    "@opensearch-project/opensearch": "^2.7.0",
-    "axios": "^1.7.2",
-    "concurrently": "^8.2.2",
-    "express": "^4.19.2",
-    "pg": "^8.11.5",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "react-router-dom": "^6.23.1",
-    "react-scripts": "5.0.1",
-    "typescript": "^5.4.5",
-    "winston": "^3.13.0"
-  },
-  "devDependencies": {
-    "@types/express": "^4.17.21",
-    "@types/node": "^20.14.2",
-    "@types/pg": "^8.11.6",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
-    "@types/react-router-dom": "^5.3.3",
-    "ts-node-dev": "^2.0.0"
-  },
-  "browserslist": {
-    "production": [">0.2%", "not dead", "not op_mini all"],
-    "development": ["last 1 chrome version", "last 1 firefox version", "last 1 safari version"]
-  },
-  "proxy": "http://localhost:4000",
-  "license": "MIT"
+    "name": "dlms-sample",
+    "version": "1.0.0",
+    "description": "Team Outing App (Polyglot/PostgreSQL edition)",
+    "scripts": {
+        "test": "ts-node src/test.ts",
+        "build": "npm run build-ui && npm run build-api",
+        "reimport": "./reimport && npm run build-api",
+        "reimport.windows": "./reimport.bat && npm run build-api",
+        "build-ui": "cd src/ui && npm run build",
+        "build-ui-local": "cd src/ui && npm run build-local",
+        "build-ui-local.windows": "cd src/ui && npm run build-local.windows",
+        "build-api": "npm install && tsoa spec-and-routes && tsc",
+        "debug": "PORT=4000 nodemon --exec ts-node src/app.ts",
+        "debug.windows": "set PORT=4000&& npx nodemon --exec ts-node src/app.ts",
+        "debug-basic-auth": "BASIC_AUTH_ENABLED=true http_proxy= https_proxy= npm run debug",
+        "debug-basic-auth.windows": "set BASIC_AUTH_ENABLED=true&& set http_proxy=&& set https_proxy=&& npm run debug.windows",
+        "debug-no-auth": "http_proxy= https_proxy= npm run debug",
+        "debug-no-auth.windows": "set http_proxy=&& set https_proxy=&& npm run debug.windows",
+        "start": "node build/app.js",
+        "start.windows": "set http_proxy=&& set https_proxy=&& node build/app.js",
+        "ts-start": "ts-node src/app.ts",
+        "puml": "ts-node src/puml.ts",
+        "prettify": "prettier --write '**/*.{js,jsx,ts,tsx,css,scss,html,json,md}'"
+    },
+    "author": "",
+    "license": "MIT",
+    "homepage": ".",
+    "overrides": {
+        "jsonwebtoken": "9.0.2",
+        "node": ">18.0.0"
+    },
+    "dependencies": {
+        "@types/express": "^4.17.13",
+        "@types/nodemon": "^1.19.2",
+        "@types/pg": "^8.11.6",
+        "@types/uuid": "^8.3.4",
+        "dlms-server": "file:dlms-server-2.0.2.tgz",
+        "express": "^4.18.1",
+        "nodemon": "^2.0.16",
+        "pg": "^8.11.5",
+        "ts-node": "^10.9.1",
+        "tsoa": "^5.1.1",
+        "uuid": "^8.3.2"
+    },
+    "devDependencies": {
+        "prettier": "^3.3.2"
+    }
 }

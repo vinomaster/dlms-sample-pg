@@ -1,0 +1,60 @@
+.bg-discover-dark {
+    background: #23233f;
+    color: white;
+    min-height: 62px;
+}
+.navbar-brand {
+    height: 48px;
+}
+.navbar-brand img {
+    height: 48px;
+    width: 128px;
+    transition: 0.4s ease all;
+}
+.icon-nav {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    right: 10px;
+    top: 0px;
+}
+.nav-item {
+    width: calc((100% - 8px) / 4);
+    text-align: center;
+    padding-right: 0;
+    /* height: 100%; */
+    background-color: unset !important;
+}
+.link-items {
+    height: 100%;
+}
+#navbar .MuiGrid-root.MuiGrid-item {
+    padding-top: 0px;
+}
+.MuiContainer-root.MuiContainer-maxWidthLg.MuiContainer-fixed {
+    max-width: 1320px;
+}
+/*
+#navbar .MuiPaper-root.MuiPaper-elevation {
+  padding-left: 0px;
+}
+*/
+#navbar .MuiButton-text {
+    color: rgba(255, 255, 255, 0.78);
+    text-transform: none;
+    background-color: #23233f;
+}
+#navbar .MuiButton-text:hover {
+    color: white;
+    background-color: #23233f;
+}
+.MuiModal-root .MuiPaper-root.MuiDrawer-paper {
+    top: 64px;
+    padding: 10px;
+}
+
+.loggedinuser {
+    color: #23233f;
+    font-size: 27px;
+    position: relative;
+}
