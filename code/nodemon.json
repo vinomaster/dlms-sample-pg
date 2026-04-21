@@ -1,0 +1,15 @@
+{
+    "exec": "ts-node src/app.ts",
+    "watch": [
+        "src/api",
+        "src/ui/src/common",
+        "src/app.ts",
+        "src/auth.ts",
+        "src/config.ts",
+        "src/err.ts",
+        "src/proxy.ts",
+        "src/appMgr.ts",
+        "src/controllers/documentController.ts"
+    ],
+    "ext": "ts,tsx,csx,css"
+}

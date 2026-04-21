@@ -1,0 +1,2273 @@
+:root {
+    --zoom: 1;
+    --meshSVGfill: rgb(0, 102, 239);
+    --transparent: rgba(0, 0, 0, 0);
+    --white: #ffffff;
+    --white-half: rgba(255, 255, 255, 0.5);
+    --on-white: var(--black);
+    --black: #121212;
+    --black-half: rgba(0, 0, 0, 0.5);
+    --nearblack: #181818;
+    --on-nearblack: #ffffff;
+    --dm-white: rgba(255, 255, 255, 0.6);
+    --dm-white-bg: var(--dm-midnight-600);
+    --dm-on-white: #121212;
+    --dm-on-white-bg: var(--dm-on-midnight-600);
+    --on-black: #ffffff;
+    --dm-on-black: rgba(255, 255, 255, 0.6);
+    --dm-nearblack: rgba(255, 255, 255, 0.6);
+    --dm-on-nearblack: rgba(255, 255, 255, 0.6);
+    --textLight: var(--white);
+    --textDark: var(--black);
+    --dm-textLight: var(--dm-white);
+    --dm-textDark: var(--black);
+    --gray-0: #fafafa;
+    --gray-100: #e4e4e4;
+    --gray-200: #cdcdcd;
+    --gray-300: #b7b7b7;
+    --gray-400: #a0a0a0;
+    --gray-500: #8a8a8a;
+    --gray-600: #737373;
+    --gray-700: #5d5d5d;
+    --gray-800: #464646;
+    --gray-900: #303030;
+    --on-gradient-1: var(--on-gradient1-a);
+    --on-gradient-2: var(--on-gradient2-a);
+    --on-gradient-3: var(--on-gradient3-a);
+    --on-gradient3-a: var(--on-gray-300);
+    --on-gradient3-b: var(--dm-on-gray-700);
+    --gradient3-a: var(--gray-0);
+    --gradient3-b: var(--dm-gray-700);
+    --on-gray-0: var(--black);
+    --on-gray-100: var(--black);
+    --on-gray-200: var(--black);
+    --on-gray-300: var(--black);
+    --on-gray-400: var(--black);
+    --on-gray-500: var(--white);
+    --on-gray-600: var(--white);
+    --on-gray-700: var(--white);
+    --on-gray-800: var(--white);
+    --on-gray-900: var(--white);
+    --dm-gray-0: #dfdfdf;
+    --dm-gray-100: #c8c8c8;
+    --dm-gray-200: #b1b1b1;
+    --dm-gray-300: #9b9b9b;
+    --dm-gray-400: #858585;
+    --dm-gray-500: #6a6a6a;
+    --dm-gray-600: #505050;
+    --dm-gray-700: #383838;
+    --dm-gray-800: #212121;
+    --dm-gray-900: #070707;
+    --dm-on-gray: var(--black);
+    --dm-on-gray-0: var(--black);
+    --dm-on-gray-100: var(--black);
+    --dm-on-gray-200: var(--black);
+    --dm-on-gray-300: var(--black);
+    --dm-on-gray-400: var(--black);
+    --dm-on-gray-500: var(--white);
+    --dm-on-gray-600: var(--white);
+    --dm-on-gray-700: var(--white);
+    --dm-on-gray-800: var(--white);
+    --dm-on-gray-900: var(--white);
+    --on-background-secondary: var(--on-gray-0);
+    --dm-on-background-secondary: var(--dm-white);
+    --background-tertiary: var(--primary);
+    --on-background-tertiary: var(--on-primary);
+    --dm-background-tertiary: var(--dm-primary-800);
+    --dm-on-background-tertiary: var(--dm-white);
+    --gradient-1: linear-gradient(
+        45deg,
+        var(--gradient1-a) 0%,
+        var(--gradient1-b) 100%
+    );
+    --gradient-2: linear-gradient(
+        45deg,
+        var(--gradient2-a) 0%,
+        var(--gradient2-b) 100%
+    );
+    --gradient-3: linear-gradient(
+        45deg,
+        var(--gradient3-a) 0%,
+        var(--gradient3-b) 100%
+    );
+    --dm-gradient-1: linear-gradient(
+        45deg,
+        var(--dm-gradient1-a) 0%,
+        var(--dm-gradient1-b) 100%
+    );
+    --dm-gradient-2: linear-gradient(
+        45deg,
+        var(--dm-gradient2-a) 0%,
+        var(--dm-gradient2-b) 100%
+    );
+    --dm-gradient-3: linear-gradient(
+        45deg,
+        var(--dm-gradient3-a) 0%,
+        var(--dm-gradient3-b) 100%
+    );
+    --text-gradient: linear-gradient(
+        45deg,
+        var(--text-gradient-a) 0%,
+        var(--text-gradient-b) 100%
+    );
+    --dm-on-gradient-1: var(--dm-on-gradient1-a);
+    --dm-on-gradient-2: var(--dm-on-gradient2-a);
+    --dm-on-gradient-3: var(--dm-on-gradient3-a);
+    --dm-text-gradient: linear-gradient(
+        45deg,
+        var(--dm-text-gradient-a) 0%,
+        var(--dm-text-gradient-b) 100%
+    );
+    --dm-on-surface: var(--dm-on-background);
+    --white-bg: #ffffff;
+    --quiet: 68%;
+    --disabled: 38%;
+    --hover: 50%;
+    --active: 100%;
+    --inset-border-0: 0 0 0 0 rgba(0, 0, 0, 0);
+    --inset-border-1: 0 0 0 var(--border-1) var(--icon);
+    --inset-border-2: 0 0 0 var(--border-2) var(--icon);
+    --inset-border-3: 0 0 0 var(--border-3) var(--icon);
+    --inset-border-4: 0 0 0 var(--border-4) var(--icon);
+    --dark-inset-border-1: 0 0 0 var(--border-1) var(--black);
+    --dark-inset-border-2: 0 0 0 var(--border-2) var(--black);
+    --dark-inset-border-3: 0 0 0 var(--border-3) var(--black);
+    --dark-inset-border-4: 0 0 0 var(--border-4) var(--black);
+    --white-inset-border-1: 0 0 0 var(--border-1) var(--white);
+    --white-inset-border-2: 0 0 0 var(--border-2) var(--white);
+    --white-inset-border-3: 0 0 0 var(--border-3) var(--white);
+    --white-inset-border-4: 0 0 0 var(--border-4) var(--white);
+    --min-target: 40px;
+    --mobile-target: 40px;
+    --animation-speed: 600ms;
+    --animation-distance: 8px;
+    --animation-focus-distance: 8px;
+    --radius-0: 0px;
+    --radius-1: 8px;
+    --radius-2: calc(var(--radius-1) * 2);
+    --radius-3: calc(var(--radius-1) * 3);
+    --radius-4: calc(var(--radius-1) * 4);
+    --radius-5: calc(var(--radius-1) * 5);
+    --radius-6: calc(var(--radius-1) * 6);
+    --radius-7: calc(var(--radius-1) * 7);
+    --radius-8: calc(var(--radius-1) * 8);
+    --radius-9: calc(var(--radius-1) * 9);
+    --radius-10: calc(var(--radius-1) * 10);
+    --radius-quarter: calc(var(--radius-1) / 4);
+    --radius-half: calc(var(--radius-1) / 2);
+    --spacing-0: 0px;
+    --spacing-1: 8px;
+    --spacing-2: calc(var(--spacing-1) * 2);
+    --spacing-3: calc(var(--spacing-1) * 3);
+    --spacing-4: calc(var(--spacing-1) * 4);
+    --spacing-5: calc(var(--spacing-1) * 5);
+    --spacing-6: calc(var(--spacing-1) * 6);
+    --spacing-7: calc(var(--spacing-1) * 7);
+    --spacing-8: calc(var(--spacing-1) * 8);
+    --spacing-9: calc(var(--spacing-1) * 9);
+    --spacing-10: calc(var(--spacing-1) * 10);
+    --spacing-quarter: calc(var(--spacing-1) / 4);
+    --spacing-half: calc(var(--spacing-1) / 2);
+    --negative-size-half: calc(0 - var(--spacing-1) / 2);
+    --border-0: 0px;
+    --border-1: 1px;
+    --border-2: calc(var(--border-1) * 2);
+    --border-3: calc(var(--border-1) * 3);
+    --border-4: calc(var(--border-1) * 4);
+    --elevation-change: 0.2;
+    --change-2: calc(1 + calc(var(--elevation-change) * 2));
+    --change-3: calc(1 + calc(var(--elevation-change) * 3));
+    --change-4: calc(1 + calc(var(--elevation-change) * 4));
+    --change-5: calc(1 + calc(var(--elevation-change) * 5));
+    --change-6: calc(1 + calc(var(--elevation-change) * 6));
+    --change-7: calc(1 + calc(var(--elevation-change) * 7));
+    --change-8: calc(1 + calc(var(--elevation-change) * 8));
+    --change-9: calc(1 + calc(var(--elevation-change) * 9));
+    --elevation-horizontal: 1px;
+    --reverse-elevation-horizontal: -1px;
+    --elevation-vertical: 1px;
+    --reverse-elevation-vertical: -1px;
+    --elevation-horizontal-2: calc(
+        var(--elevation-horizontal) * var(--change-2)
+    );
+    --elevation-horizontal-3: calc(
+        var(--elevation-horizontal) * var(--change-3)
+    );
+    --elevation-horizontal-4: calc(
+        var(--elevation-horizontal) * var(--change-4)
+    );
+    --elevation-horizontal-5: calc(
+        var(--elevation-horizontal) * var(--change-5)
+    );
+    --elevation-horizontal-6: calc(
+        var(--elevation-horizontal) * var(--change-6)
+    );
+    --elevation-horizontal-7: calc(
+        var(--elevation-horizontal) * var(--change-7)
+    );
+    --elevation-horizontal-8: calc(
+        var(--elevation-horizontal) * var(--change-8)
+    );
+    --elevation-horizontal-9: calc(
+        var(--elevation-horizontal) * var(--change-9)
+    );
+    --elevation-vertical-2: calc(var(--elevation-vertical) * var(--change-2));
+    --elevation-vertical-3: calc(var(--elevation-vertical) * var(--change-3));
+    --elevation-vertical-4: calc(var(--elevation-vertical) * var(--change-4));
+    --elevation-vertical-5: calc(var(--elevation-vertical) * var(--change-5));
+    --elevation-vertical-6: calc(var(--elevation-vertical) * var(--change-6));
+    --elevation-vertical-7: calc(var(--elevation-vertical) * var(--change-7));
+    --elevation-vertical-8: calc(var(--elevation-vertical) * var(--change-8));
+    --elevation-vertical-9: calc(var(--elevation-vertical) * var(--change-9));
+    --reverse-elevation-horizontal-2: calc(
+        var(--reverse-elevation-horizontal) * var(--change-2)
+    );
+    --reverse-elevation-horizontal-3: calc(
+        var(--reverse-elevation-horizontal) * var(--change-3)
+    );
+    --reverse-elevation-horizontal-4: calc(
+        var(--reverse-elevation-horizontal) * var(--change-4)
+    );
+    --reverse-elevation-horizontal-5: calc(
+        var(--reverse-elevation-horizontal) * var(--change-5)
+    );
+    --reverse-elevation-horizontal-6: calc(
+        var(--reverse-elevation-horizontal) * var(--change-6)
+    );
+    --reverse-elevation-horizontal-7: calc(
+        var(--reverse-elevation-horizontal) * var(--change-7)
+    );
+    --reverse-elevation-horizontal-8: calc(
+        var(--reverse-elevation-horizontal) * var(--change-8)
+    );
+    --reverse-elevation-horizontal-9: calc(
+        var(--reverse-elevation-horizontal) * var(--change-9)
+    );
+    --reverse-elevation-vertical-2: calc(
+        var(--reverse-elevation-vertical) * var(--change-2)
+    );
+    --reverse-elevation-vertical-3: calc(
+        var(--reverse-elevation-vertical) * var(--change-3)
+    );
+    --reverse-elevation-vertical-4: calc(
+        var(--reverse-elevation-vertical) * var(--change-4)
+    );
+    --reverse-elevation-vertical-5: calc(
+        var(--reverse-elevation-vertical) * var(--change-5)
+    );
+    --reverse-elevation-vertical-6: calc(
+        var(--reverse-elevation-vertical) * var(--change-6)
+    );
+    --reverse-elevation-vertical-7: calc(
+        var(--reverse-elevation-vertical) * var(--change-7)
+    );
+    --reverse-elevation-vertical-8: calc(
+        var(--reverse-elevation-vertical) * var(--change-8)
+    );
+    --reverse-elevation-vertical-9: calc(
+        var(--reverse-elevation-vertical) * var(--change-9)
+    );
+    --elevation-blur: 6px;
+    --elevation-blur-2: calc(var(--elevation-blur) * var(--change-2));
+    --elevation-blur-3: calc(var(--elevation-blur) * var(--change-3));
+    --elevation-blur-4: calc(var(--elevation-blur) * var(--change-4));
+    --elevation-blur-5: calc(var(--elevation-blur) * var(--change-5));
+    --elevation-blur-6: calc(var(--elevation-blur) * var(--change-6));
+    --elevation-blur-7: calc(var(--elevation-blur) * var(--change-7));
+    --elevation-blur-8: calc(var(--elevation-blur) * var(--change-8));
+    --elevation-blur-9: calc(var(--elevation-blur) * var(--change-9));
+    --elevation-spread: 5px;
+    --elevation-spread-2: calc(var(--elevation-spread) * var(--change-2));
+    --elevation-spread-3: calc(var(--elevation-spread) * var(--change-3));
+    --elevation-spread-4: calc(var(--elevation-spread) * var(--change-4));
+    --elevation-spread-5: calc(var(--elevation-spread) * var(--change-5));
+    --elevation-spread-6: calc(var(--elevation-spread) * var(--change-6));
+    --elevation-spread-7: calc(var(--elevation-spread) * var(--change-7));
+    --elevation-spread-8: calc(var(--elevation-spread) * var(--change-8));
+    --elevation-spread-9: calc(var(--elevation-spread) * var(--change-9));
+    --base-elevation-1: 0 0 var(--base-elevation-blur)
+        var(--base-elevation-spread);
+    --base-elevation-2: 0 0 var(--base-elevation-blur-2)
+        var(--base-elevation-spread-2);
+    --base-elevation-3: 0 0 var(--base-elevation-blur-3)
+        var(--base-elevation-spread-3);
+    --base-elevation-4: 0 0 var(--base-elevation-blur-4)
+        var(--base-elevation-spread-4);
+    --base-elevation-5: 0 0 var(--base-elevation-blur-5)
+        var(--base-elevation-spread-5);
+    --base-elevation-6: 0 0 var(--base-elevation-blur-6)
+        var(--base-elevation-spread-6);
+    --base-elevation-7: 0 0 var(--base-elevation-blur-7)
+        var(--base-elevation-spread-7);
+    --base-elevation-8: 0 0 var(--base-elevation-blur-8)
+        var(--base-elevation-spread-8);
+    --base-elevation-9: 0 0 var(--base-elevation-blur-9)
+        var(--base-elevation-spread-9);
+    --base-elevation-blur: 2px;
+    --base-elevation-blur-2: calc(var(--base-elevation-blur) * var(--change-2));
+    --base-elevation-blur-3: calc(var(--base-elevation-blur) * var(--change-3));
+    --base-elevation-blur-4: calc(var(--base-elevation-blur) * var(--change-4));
+    --base-elevation-blur-5: calc(var(--base-elevation-blur) * var(--change-5));
+    --base-elevation-blur-6: calc(var(--base-elevation-blur) * var(--change-6));
+    --base-elevation-blur-7: calc(var(--base-elevation-blur) * var(--change-7));
+    --base-elevation-blur-8: calc(var(--base-elevation-blur) * var(--change-8));
+    --base-elevation-blur-9: calc(var(--base-elevation-blur) * var(--change-9));
+    --base-elevation-spread: 3px;
+    --base-elevation-spread-2: calc(
+        var(--base-elevation-spread) * var(--change-2)
+    );
+    --base-elevation-spread-3: calc(
+        var(--base-elevation-spread) * var(--change-3)
+    );
+    --base-elevation-spread-4: calc(
+        var(--base-elevation-spread) * var(--change-4)
+    );
+    --base-elevation-spread-5: calc(
+        var(--base-elevation-spread) * var(--change-5)
+    );
+    --base-elevation-spread-6: calc(
+        var(--base-elevation-spread) * var(--change-6)
+    );
+    --base-elevation-spread-7: calc(
+        var(--base-elevation-spread) * var(--change-7)
+    );
+    --base-elevation-spread-8: calc(
+        var(--base-elevation-spread) * var(--change-8)
+    );
+    --base-elevation-spread-9: calc(
+        var(--base-elevation-spread) * var(--change-9)
+    );
+    --elevation-rgb: 0, 0, 0;
+    --elevation-opacity: 0.04;
+    --base-elevation-opacity: 0;
+    --elevation-0: 0 0 0 0 rgba(0, 0, 0, 0);
+    --elevation-1: calc(var(--elevation-horizontal) * var(--change-1))
+            calc(var(--elevation-vertical) * var(--change-1))
+            calc(var(--elevation-blur) * var(--change-1))
+            calc(var(--elevation-spread) * var(--change-1))
+            rgba(
+                var(--elevation-rgb),
+                calc(var(--elevation-opacity) * var(--change-1))
+            ),
+        0 0 calc(var(--base-elevation-blur) * var(--change-1))
+            calc(var(--base-elevation-spread) * var(--change-1))
+            rgba(
+                var(--elevation-rgb),
+                calc(var(--base-elevation-opacity) * var(--change-1))
+            );
+    --elevation-2: calc(var(--elevation-horizontal) * var(--change-2))
+            calc(var(--elevation-vertical) * var(--change-2))
+            calc(var(--elevation-blur) * var(--change-2))
+            calc(var(--elevation-spread) * var(--change-2))
+            rgba(
+                var(--elevation-rgb),
+                calc(var(--elevation-opacity) * var(--change-2))
+            ),
+        0 0 calc(var(--base-elevation-blur) * var(--change-2))
+            calc(var(--base-elevation-spread) * var(--change-2))
+            rgba(
+                var(--elevation-rgb),
+                calc(var(--base-elevation-opacity) * var(--change-2))
+            );
+    --elevation-3: calc(var(--elevation-horizontal) * var(--change-3))
+            calc(var(--elevation-vertical) * var(--change-3))
+            calc(var(--elevation-blur) * var(--change-3))
+            calc(var(--elevation-spread) * var(--change-3))
+            rgba(
+                var(--elevation-rgb),
+                calc(var(--elevation-opacity) * var(--change-3))
+            ),
+        0 0 calc(var(--base-elevation-blur) * var(--change-3))
+            calc(var(--base-elevation-spread) * var(--change-3))
+            rgba(
+                var(--elevation-rgb),
+                calc(var(--base-elevation-opacity) * var(--change-3))
+            );
+    --elevation-4: calc(var(--elevation-horizontal) * var(--change-4))
+            calc(var(--elevation-vertical) * var(--change-4))
+            calc(var(--elevation-blur) * var(--change-4))
+            calc(var(--elevation-spread) * var(--change-4))
+            rgba(
+                var(--elevation-rgb),
+                calc(var(--elevation-opacity) * var(--change-4))
+            ),
+        0 0 calc(var(--base-elevation-blur) * var(--change-4))
+            calc(var(--base-elevation-spread) * var(--change-4))
+            rgba(
+                var(--elevation-rgb),
+                calc(var(--base-elevation-opacity) * var(--change-4))
+            );
+    --elevation-5: calc(var(--elevation-horizontal) * var(--change-5))
+            calc(var(--elevation-vertical) * var(--change-5))
+            calc(var(--elevation-blur) * var(--change-5))
+            calc(var(--elevation-spread) * var(--change-5))
+            rgba(
+                var(--elevation-rgb),
+                calc(var(--elevation-opacity) * var(--change-5))
+            ),
+        0 0 calc(var(--base-elevation-blur) * var(--change-5))
+            calc(var(--base-elevation-spread) * var(--change-5))
+            rgba(
+                var(--elevation-rgb),
+                calc(var(--base-elevation-opacity) * var(--change-5))
+            );
+    --elevation-6: calc(var(--elevation-horizontal) * var(--change-6))
+            calc(var(--elevation-vertical) * var(--change-6))
+            calc(var(--elevation-blur) * var(--change-6))
+            calc(var(--elevation-spread) * var(--change-6))
+            rgba(
+                var(--elevation-rgb),
+                calc(var(--elevation-opacity) * var(--change-6))
+            ),
+        0 0 calc(var(--base-elevation-blur) * var(--change-6))
+            calc(var(--base-elevation-spread) * var(--change-6))
+            rgba(
+                var(--elevation-rgb),
+                calc(var(--base-elevation-opacity) * var(--change-6))
+            );
+    --elevation-7: calc(var(--elevation-horizontal) * var(--change-7))
+            calc(var(--elevation-vertical) * var(--change-7))
+            calc(var(--elevation-blur) * var(--change-7))
+            calc(var(--elevation-spread) * var(--change-7))
+            rgba(
+                var(--elevation-rgb),
+                calc(var(--elevation-opacity) * var(--change-7))
+            ),
+        0 0 calc(var(--base-elevation-blur) * var(--change-7))
+            calc(var(--base-elevation-spread) * var(--change-7))
+            rgba(
+                var(--elevation-rgb),
+                calc(var(--base-elevation-opacity) * var(--change-7))
+            );
+    --elevation-8: calc(var(--elevation-horizontal) * var(--change-8))
+            calc(var(--elevation-vertical) * var(--change-8))
+            calc(var(--elevation-blur) * var(--change-8))
+            calc(var(--elevation-spread) * var(--change-8))
+            rgba(
+                var(--elevation-rgb),
+                calc(var(--elevation-opacity) * var(--change-8))
+            ),
+        0 0 calc(var(--base-elevation-blur) * var(--change-8))
+            calc(var(--base-elevation-spread) * var(--change-8))
+            rgba(
+                var(--elevation-rgb),
+                calc(var(--base-elevation-opacity) * var(--change-8))
+            );
+    --elevation-9: calc(var(--elevation-horizontal) * var(--change-9))
+            calc(var(--elevation-vertical) * var(--change-9))
+            calc(var(--elevation-blur) * var(--change-9))
+            calc(var(--elevation-spread) * var(--change-9))
+            rgba(
+                var(--elevation-rgb),
+                calc(var(--elevation-opacity) * var(--change-9))
+            ),
+        0 0 calc(var(--base-elevation-blur) * var(--change-9))
+            calc(var(--base-elevation-spread) * var(--change-9))
+            rgba(
+                var(--elevation-rgb),
+                calc(var(--base-elevation-opacity) * var(--change-9))
+            );
+    --bevel-horizontal: 4px;
+    --bevel-vertical: 4px;
+    --bevel-spread: 1px;
+    --bevel-blur: 9px;
+    --bevel-light-opacity: 0.59;
+    --bevel-dark-opacity: 0.27;
+    --bevel-change: 0.16;
+    --bevel-0: 0 0 0 0 rgba(0, 0, 0, 0);
+    --bevel-1: inset
+            calc(
+                var(--bevel-horizontal) *
+                    calc(1 + calc(var(--bevel-change) * 1))
+            )
+            calc(
+                var(--bevel-vertical) * calc(1 + calc(var(--bevel-change) * 1))
+            )
+            var(--bevel-blur) var(--bevel-spread)
+            rgba(255, 255, 255, var(--bevel-light-opacity)),
+        inset
+            calc(
+                0px -
+                    calc(
+                        var(--bevel-horizontal) *
+                            calc(1 + calc(var(--bevel-change) * 1))
+                    )
+            )
+            calc(
+                0px -
+                    calc(
+                        var(--bevel-vertical) *
+                            calc(1 + calc(var(--bevel-change) * 1))
+                    )
+            )
+            var(--bevel-blur) var(--bevel-spread)
+            rgba(
+                0,
+                0,
+                0,
+                calc(
+                    var(--bevel-dark-opacity) *
+                        calc(1 + calc(var(--bevel-change) * 1))
+                )
+            );
+    --bevel-2: inset
+            calc(
+                var(--bevel-horizontal) *
+                    calc(1 + calc(var(--bevel-change) * 2))
+            )
+            calc(
+                var(--bevel-vertical) * calc(1 + calc(var(--bevel-change) * 2))
+            )
+            var(--bevel-blur) var(--bevel-spread)
+            rgba(255, 255, 255, var(--bevel-light-opacity)),
+        inset
+            calc(
+                0px -
+                    calc(
+                        var(--bevel-horizontal) *
+                            calc(1 + calc(var(--bevel-change) * 2))
+                    )
+            )
+            calc(
+                0px -
+                    calc(
+                        var(--bevel-vertical) *
+                            calc(1 + calc(var(--bevel-change) * 2))
+                    )
+            )
+            var(--bevel-blur) var(--bevel-spread)
+            rgba(
+                0,
+                0,
+                0,
+                calc(
+                    var(--bevel-dark-opacity) *
+                        calc(1 + calc(var(--bevel-change) * 2))
+                )
+            );
+    --bevel-3: inset
+            calc(
+                var(--bevel-horizontal) *
+                    calc(1 + calc(var(--bevel-change) * 3))
+            )
+            calc(
+                var(--bevel-vertical) * calc(1 + calc(var(--bevel-change) * 3))
+            )
+            var(--bevel-blur) var(--bevel-spread)
+            rgba(255, 255, 255, var(--bevel-light-opacity)),
+        inset
+            calc(
+                0px -
+                    calc(
+                        var(--bevel-horizontal) *
+                            calc(1 + calc(var(--bevel-change) * 3))
+                    )
+            )
+            calc(
+                0px -
+                    calc(
+                        var(--bevel-vertical) *
+                            calc(1 + calc(var(--bevel-change) * 3))
+                    )
+            )
+            var(--bevel-blur) var(--bevel-spread)
+            rgba(
+                0,
+                0,
+                0,
+                calc(
+                    var(--bevel-dark-opacity) *
+                        calc(1 + calc(var(--bevel-change) * 3))
+                )
+            );
+    --bevel-4: inset
+            calc(
+                var(--bevel-horizontal) *
+                    calc(1 + calc(var(--bevel-change) * 4))
+            )
+            calc(
+                var(--bevel-vertical) * calc(1 + calc(var(--bevel-change) * 4))
+            )
+            var(--bevel-blur) var(--bevel-spread)
+            rgba(255, 255, 255, var(--bevel-light-opacity)),
+        inset
+            calc(
+                0px -
+                    calc(
+                        var(--bevel-horizontal) *
+                            calc(1 + calc(var(--bevel-change) * 4))
+                    )
+            )
+            calc(
+                0px -
+                    calc(
+                        var(--bevel-vertical) *
+                            calc(1 + calc(var(--bevel-change) * 4))
+                    )
+            )
+            var(--bevel-blur) var(--bevel-spread)
+            rgba(
+                0,
+                0,
+                0,
+                calc(
+                    var(--bevel-dark-opacity) *
+                        calc(1 + calc(var(--bevel-change) * 4))
+                )
+            );
+    --bevel-5: inset
+            calc(
+                var(--bevel-horizontal) *
+                    calc(1 + calc(var(--bevel-change) * 5))
+            )
+            calc(
+                var(--bevel-vertical) * calc(1 + calc(var(--bevel-change) * 5))
+            )
+            var(--bevel-blur) var(--bevel-spread)
+            rgba(255, 255, 255, var(--bevel-light-opacity)),
+        inset
+            calc(
+                0px -
+                    calc(
+                        var(--bevel-horizontal) *
+                            calc(1 + calc(var(--bevel-change) * 5))
+                    )
+            )
+            calc(
+                0px -
+                    calc(
+                        var(--bevel-vertical) *
+                            calc(1 + calc(var(--bevel-change) * 5))
+                    )
+            )
+            var(--bevel-blur) var(--bevel-spread)
+            rgba(
+                0,
+                0,
+                0,
+                calc(
+                    var(--bevel-dark-opacity) *
+                        calc(1 + calc(var(--bevel-change) * 5))
+                )
+            );
+    --bevel-6: inset
+            calc(
+                var(--bevel-horizontal) *
+                    calc(1 + calc(var(--bevel-change) * 6))
+            )
+            calc(
+                var(--bevel-vertical) * calc(1 + calc(var(--bevel-change) * 6))
+            )
+            var(--bevel-blur) var(--bevel-spread)
+            rgba(255, 255, 255, var(--bevel-light-opacity)),
+        inset
+            calc(
+                0px -
+                    calc(
+                        var(--bevel-horizontal) *
+                            calc(1 + calc(var(--bevel-change) * 6))
+                    )
+            )
+            calc(
+                0px -
+                    calc(
+                        var(--bevel-vertical) *
+                            calc(1 + calc(var(--bevel-change) * 6))
+                    )
+            )
+            var(--bevel-blur) var(--bevel-spread)
+            rgba(
+                0,
+                0,
+                0,
+                calc(
+                    var(--bevel-dark-opacity) *
+                        calc(1 + calc(var(--bevel-change) * 6))
+                )
+            );
+    --bevel-7: inset
+            calc(
+                var(--bevel-horizontal) *
+                    calc(1 + calc(var(--bevel-change) * 7))
+            )
+            calc(
+                var(--bevel-vertical) * calc(1 + calc(var(--bevel-change) * 7))
+            )
+            var(--bevel-blur) var(--bevel-spread)
+            rgba(255, 255, 255, var(--bevel-light-opacity)),
+        inset
+            calc(
+                0px -
+                    calc(
+                        var(--bevel-horizontal) *
+                            calc(1 + calc(var(--bevel-change) * 7))
+                    )
+            )
+            calc(
+                0px -
+                    calc(
+                        var(--bevel-vertical) *
+                            calc(1 + calc(var(--bevel-change) * 7))
+                    )
+            )
+            var(--bevel-blur) var(--bevel-spread)
+            rgba(
+                0,
+                0,
+                0,
+                calc(
+                    var(--bevel-dark-opacity) *
+                        calc(1 + calc(var(--bevel-change) * 7))
+                )
+            );
+    --bevel-8: inset
+            calc(
+                var(--bevel-horizontal) *
+                    calc(1 + calc(var(--bevel-change) * 8))
+            )
+            calc(
+                var(--bevel-vertical) * calc(1 + calc(var(--bevel-change) * 8))
+            )
+            var(--bevel-blur) var(--bevel-spread)
+            rgba(255, 255, 255, var(--bevel-light-opacity)),
+        inset
+            calc(
+                0px -
+                    calc(
+                        var(--bevel-horizontal) *
+                            calc(1 + calc(var(--bevel-change) * 8))
+                    )
+            )
+            calc(
+                0px -
+                    calc(
+                        var(--bevel-vertical) *
+                            calc(1 + calc(var(--bevel-change) * 8))
+                    )
+            )
+            var(--bevel-blur) var(--bevel-spread)
+            rgba(
+                0,
+                0,
+                0,
+                calc(
+                    var(--bevel-dark-opacity) *
+                        calc(1 + calc(var(--bevel-change) * 8))
+                )
+            );
+    --bevel-9: inset
+            calc(
+                var(--bevel-horizontal) *
+                    calc(1 + calc(var(--bevel-change) * 9))
+            )
+            calc(
+                var(--bevel-vertical) * calc(1 + calc(var(--bevel-change) * 9))
+            )
+            var(--bevel-blur) var(--bevel-spread)
+            rgba(255, 255, 255, var(--bevel-light-opacity)),
+        inset
+            calc(
+                0px -
+                    calc(
+                        var(--bevel-horizontal) *
+                            calc(1 + calc(var(--bevel-change) * 9))
+                    )
+            )
+            calc(
+                0px -
+                    calc(
+                        var(--bevel-vertical) *
+                            calc(1 + calc(var(--bevel-change) * 9))
+                    )
+            )
+            var(--bevel-blur) var(--bevel-spread)
+            rgba(
+                0,
+                0,
+                0,
+                calc(
+                    var(--bevel-dark-opacity) *
+                        calc(1 + calc(var(--bevel-change) * 9))
+                )
+            );
+    --inbevel-horizontal: 2px;
+    --inbevel-vertical: 6px;
+    --inbevel-spread: 4px;
+    --inbevel-blur: 9px;
+    --inbevel-light-opacity: 0.31;
+    --inbevel-dark-opacity: 0.59;
+    --inbevel-change: 0.36;
+    --reverse-bevel-1: inset
+        calc(
+            var(--inbevel-horizontal) *
+                calc(1 - calc(var(--inbevel-change) * 1))
+        )
+        calc(
+            var(--inbevel-vertical) *
+                calc(1 - calc(var(--inbevel-change) * 0.1))
+        )
+        calc(var(--inbevel-blur) * 0.9) calc(var(--inbevel-spread) * 0.9)
+        rgba(
+            0,
+            0,
+            0,
+            calc(
+                var(--inbevel-dark-opacity) *
+                    calc(1 + calc(var(--inbevel-change) * 0.1))
+            )
+        );
+    --reverse-bevel-2: inset
+        calc(
+            var(--inbevel-horizontal) *
+                calc(1 - calc(var(--inbevel-change) * 2))
+        )
+        calc(
+            var(--inbevel-vertical) *
+                calc(1 - calc(var(--inbevel-change) * 0.2))
+        )
+        calc(var(--inbevel-blur) * 0.8) calc(var(--inbevel-spread) * 0.8)
+        rgba(
+            0,
+            0,
+            0,
+            calc(
+                var(--inbevel-dark-opacity) *
+                    calc(1 + calc(var(--inbevel-change) * 0.2))
+            )
+        );
+    --reverse-bevel-3: inset
+        calc(
+            var(--inbevel-horizontal) *
+                calc(1 - calc(var(--inbevel-change) * 3))
+        )
+        calc(
+            var(--inbevel-vertical) *
+                calc(1 - calc(var(--inbevel-change) * 0.3))
+        )
+        calc(var(--inbevel-blur) * 0.7) calc(var(--inbevel-spread) * 0.7)
+        rgba(
+            0,
+            0,
+            0,
+            calc(
+                var(--inbevel-dark-opacity) *
+                    calc(1 + calc(var(--inbevel-change) * 0.3))
+            )
+        );
+    --reverse-bevel-4: inset
+        calc(
+            var(--inbevel-horizontal) *
+                calc(1 - calc(var(--inbevel-change) * 4))
+        )
+        calc(
+            var(--inbevel-vertical) *
+                calc(1 - calc(var(--inbevel-change) * 0.4))
+        )
+        calc(var(--inbevel-blur) * 0.6) calc(var(--inbevel-spread) * 0.6)
+        rgba(
+            0,
+            0,
+            0,
+            calc(
+                var(--inbevel-dark-opacity) *
+                    calc(1 + calc(var(--inbevel-change) * 0.4))
+            )
+        );
+    --reverse-bevel-5: inset
+        calc(
+            var(--inbevel-horizontal) *
+                calc(1 - calc(var(--inbevel-change) * 5))
+        )
+        calc(
+            var(--inbevel-vertical) *
+                calc(1 - calc(var(--inbevel-change) * 0.5))
+        )
+        calc(var(--inbevel-blur) * 0.5) calc(var(--inbevel-spread) * 0.5)
+        rgba(
+            0,
+            0,
+            0,
+            calc(
+                var(--inbevel-dark-opacity) *
+                    calc(1 + calc(var(--inbevel-change) * 0.5))
+            )
+        );
+    --reverse-bevel-6: inset
+        calc(
+            var(--inbevel-horizontal) *
+                calc(1 - calc(var(--inbevel-change) * 6))
+        )
+        calc(
+            var(--inbevel-vertical) *
+                calc(1 - calc(var(--inbevel-change) * 0.6))
+        )
+        calc(var(--inbevel-blur) * 0.4) calc(var(--inbevel-spread) * 0.4)
+        rgba(
+            0,
+            0,
+            0,
+            calc(
+                var(--inbevel-dark-opacity) *
+                    calc(1 + calc(var(--inbevel-change) * 0.6))
+            )
+        );
+    --reverse-bevel-7: inset
+        calc(
+            var(--inbevel-horizontal) *
+                calc(1 - calc(var(--inbevel-change) * 7))
+        )
+        calc(
+            var(--inbevel-vertical) *
+                calc(1 - calc(var(--inbevel-change) * 0.7))
+        )
+        calc(var(--inbevel-blur) * 0.3) calc(var(--inbevel-spread) * 0.3)
+        rgba(
+            0,
+            0,
+            0,
+            calc(
+                var(--inbevel-dark-opacity) *
+                    calc(1 + calc(var(--inbevel-change) * 0.7))
+            )
+        );
+    --reverse-bevel-8: inset
+        calc(
+            var(--inbevel-horizontal) *
+                calc(1 - calc(var(--inbevel-change) * 8))
+        )
+        calc(
+            var(--inbevel-vertical) *
+                calc(1 - calc(var(--inbevel-change) * 0.8))
+        )
+        calc(var(--inbevel-blur) * 0.2) calc(var(--inbevel-spread) * 0.2)
+        rgba(
+            0,
+            0,
+            0,
+            calc(
+                var(--inbevel-dark-opacity) *
+                    calc(1 + calc(var(--inbevel-change) * 0.8))
+            )
+        );
+    --reverse-bevel-9: inset
+        calc(
+            var(--inbevel-horizontal) *
+                calc(1 - calc(var(--inbevel-change) * 9))
+        )
+        calc(
+            var(--inbevel-vertical) *
+                calc(1 - calc(var(--inbevel-change) * 0.9))
+        )
+        calc(var(--inbevel-blur) * 0.1) calc(var(--inbevel-spread) * 0.1)
+        rgba(
+            0,
+            0,
+            0,
+            calc(
+                var(--inbevel-dark-opacity) *
+                    calc(1 + calc(var(--inbevel-change) * 0.9))
+            )
+        );
+    --focusBlur: 4px;
+    --info: #0066ef;
+    --on-info: rgba(255, 255, 255, 1);
+    --dm-info: #307cdd;
+    --dm-on-info: rgba(18, 18, 18, 1);
+    --success: #327d35;
+    --on-success: rgba(255, 255, 255, 1);
+    --dm-success: #418c44;
+    --dm-on-success: rgba(18, 18, 18, 1);
+    --warning: #a06b1a;
+    --on-warning: rgba(255, 255, 255, 1);
+    --dm-warning: #aa701a;
+    --dm-on-warning: rgba(18, 18, 18, 1);
+    --danger: #d62b2b;
+    --on-danger: rgba(255, 255, 255, 1);
+    --dm-danger: #d55050;
+    --dm-on-danger: rgba(18, 18, 18, 1);
+    --primaryFont: sans-serif;
+    --secondaryFont: sans-serif;
+    --baseFont: 14px;
+    --fontWeight-0: 400;
+    --fontWeight-1: 500;
+    --fontWeight-2: 600;
+    --fontWeight-3: 700;
+    --fontWeight-4: 900;
+    --standard-LineHeight: 160%;
+    --header-LineHeight: 130%;
+    --sm-LineHeight: 160%;
+    --headerChange: 42;
+    --headerWeight: 700;
+    --Display1FontSize: 60px;
+    --Display1FontWeight: 600;
+    --Display1FontFamily: sans-serif;
+    --Display1LetterSpacing: -1%;
+    --Display1LineHeight: 130%;
+    --Display1TextDecoration: none;
+    --Display1TextTransform: none;
+    --Display2FontSize: 48px;
+    --Display2FontWeight: 600;
+    --Display2FontFamily: sans-serif;
+    --Display2LetterSpacing: -0.5%;
+    --Display2LineHeight: 130%;
+    --Display2TextDecoration: none;
+    --Display2TextTransform: none;
+    --h1FontSize: 48px;
+    --h1FontWeight: 600;
+    --h1FontFamily: sans-serif;
+    --h1LetterSpacing: -0.5%;
+    --h1LineHeight: 130%;
+    --h1TextDecoration: none;
+    --h1TextTransform: none;
+    --h2FontSize: 36px;
+    --h2FontWeight: 600;
+    --h2FontFamily: sans-serif;
+    --h2LetterSpacing: -0.5%;
+    --h2LineHeight: 130%;
+    --h2TextDecoration: none;
+    --h2TextTransform: none;
+    --h3FontSize: 32px;
+    --h3FontWeight: 600;
+    --h3FontFamily: sans-serif;
+    --h3LetterSpacing: -0.5%;
+    --h3LineHeight: 130%;
+    --h3TextDecoration: none;
+    --h3TextTransform: none;
+    --h4FontSize: 24px;
+    --h4FontWeight: 700;
+    --h4FontFamily: sans-serif;
+    --h4LetterSpacing: -0.5%;
+    --h4LineHeight: 130%;
+    --h4TextDecoration: none;
+    --h4TextTransform: none;
+    --h5FontSize: 20px;
+    --h5FontWeight: 700;
+    --h5FontFamily: sans-serif;
+    --h5LetterSpacing: -0.5%;
+    --h5LineHeight: 130%;
+    --h5TextDecoration: none;
+    --h5TextTransform: none;
+    --h6FontSize: 18px;
+    --h6FontWeight: 700;
+    --h6FontFamily: sans-serif;
+    --h6LetterSpacing: -0.5%;
+    --h6LineHeight: 130%;
+    --h6TextDecoration: none;
+    --h6TextTransform: none;
+    --headerFamily: var(--secondaryFont);
+    --bodyFamily: var(--primaryFont);
+    --body1FontSize: 16px;
+    --body1FontWeight: 400;
+    --body1FontFamily: sans-serif;
+    --body1LetterSpacing: 5%;
+    --body1LineHeight: 160%;
+    --body1TextDecoration: none;
+    --body1TextTransform: none;
+    --body1-boldFontSize: 16px;
+    --body1-boldFontWeight: 700;
+    --body1-boldFontFamily: sans-serif;
+    --body1-boldLetterSpacing: 5%;
+    --body1-boldLineHeight: 160%;
+    --body1-boldTextDecoration: none;
+    --body1-boldTextTransform: none;
+    --body2FontSize: 14px;
+    --body2FontWeight: 600;
+    --body2FontFamily: sans-serif;
+    --body2LetterSpacing: 1.75%;
+    --body2LineHeight: 160%;
+    --body2TextDecoration: none;
+    --body2TextTransform: none;
+    --body2-boldFontSize: 14px;
+    --body2-boldFontWeight: 700;
+    --body2-boldFontFamily: sans-serif;
+    --body2-boldLetterSpacing: 1.75%;
+    --body2-boldLineHeight: 160%;
+    --body2-boldTextDecoration: none;
+    --body2-boldTextTransform: none;
+    --body3FontSize: 11px;
+    --body3FontWeight: 500;
+    --body3FontFamily: sans-serif;
+    --body3LetterSpacing: 2.25%;
+    --body3LineHeight: 160%;
+    --body3TextDecoration: none;
+    --body3TextTransform: none;
+    --body3-boldFontSize: 11px;
+    --body3-boldFontWeight: 700;
+    --body3-boldFontFamily: sans-serif;
+    --body3-boldLetterSpacing: 2.25%;
+    --body3-boldLineHeight: 160%;
+    --body3-boldTextDecoration: none;
+    --body3-boldTextTransform: none;
+    --subtitle1FontSize: 16px;
+    --subtitle1FontWeight: 600;
+    --subtitle1FontFamily: sans-serif;
+    --subtitle1LetterSpacing: 2%;
+    --subtitle1LineHeight: 160%;
+    --subtitle1TextDecoration: none;
+    --subtitle1TextTransform: none;
+    --subtitle2FontSize: 14px;
+    --subtitle2FontWeight: 700;
+    --subtitle2FontFamily: sans-serif;
+    --subtitle2LetterSpacing: 1.75%;
+    --subtitle2LineHeight: 160%;
+    --subtitle2TextDecoration: none;
+    --subtitle2TextTransform: none;
+    --captionFontSize: 12px;
+    --captionFontWeight: 600;
+    --captionFontFamily: sans-serif;
+    --captionLetterSpacing: 1.5%;
+    --captionLineHeight: 160%;
+    --captionTextDecoration: none;
+    --captionTextTransform: none;
+    --caption-boldFontSize: 12px;
+    --caption-boldFontWeight: 700;
+    --caption-boldFontFamily: sans-serif;
+    --caption-boldLetterSpacing: 1.5%;
+    --caption-boldLineHeight: 160%;
+    --caption-boldTextDecoration: none;
+    --caption-boldTextTransform: none;
+    --overlineFontSize: 10px;
+    --overlineFontWeight: 600;
+    --overlineFontFamily: sans-serif;
+    --overlineLetterSpacing: 0.12%;
+    --overlineLineHeight: 160%;
+    --overlineTextDecoration: none;
+    --overlineTextTransform: none;
+    --overline-largeFontSize: 14px;
+    --overline-largeFontWeight: 600;
+    --overline-largeFontFamily: sans-serif;
+    --overline-largeLetterSpacing: 1.75%;
+    --overline-largeLineHeight: 160%;
+    --overline-largeTextDecoration: none;
+    --overline-largeTextTransform: none;
+    --overline-XLFontSize: 16px;
+    --overline-XLFontWeight: 700;
+    --overline-XLFontFamily: sans-serif;
+    --overline-XLLetterSpacing: 2%;
+    --overline-XLLineHeight: 160%;
+    --overline-XLTextDecoration: none;
+    --overline-XLTextTransform: none;
+    --label-1FontSize: 14px;
+    --label-1FontWeight: 700;
+    --label-1FontFamily: sans-serif;
+    --label-1LetterSpacing: 1.75%;
+    --label-1LineHeight: 160%;
+    --label-1TextDecoration: none;
+    --label-1TextTransform: none;
+    --label-1-allCapsFontSize: 14px;
+    --label-1-allCapsFontWeight: 700;
+    --label-1-allCapsFontFamily: sans-serif;
+    --label-1-allCapsLetterSpacing: 1.75%;
+    --label-1-allCapsLineHeight: 160%;
+    --label-1-allCapsTextDecoration: none;
+    --label-1-allCapsTextTransform: none;
+    --label-2FontSize: 12px;
+    --label-2FontWeight: 700;
+    --label-2FontFamily: sans-serif;
+    --label-2LetterSpacing: 1.5%;
+    --label-2LineHeight: 160%;
+    --label-2TextDecoration: none;
+    --label-2TextTransform: none;
+    --label-2-allCapsFontSize: 12px;
+    --label-2-allCapsFontWeight: 700;
+    --label-2-allCapsFontFamily: sans-serif;
+    --label-2-allCapsLetterSpacing: 1.5%;
+    --label-2-allCapsLineHeight: 160%;
+    --label-2-allCapsTextDecoration: none;
+    --label-2-allCapsTextTransform: none;
+    --label-smallFontSize: 10px;
+    --label-smallFontWeight: 700;
+    --label-smallFontFamily: sans-serif;
+    --label-smallLetterSpacing: 0.12%;
+    --label-smallLineHeight: 160%;
+    --label-smallTextDecoration: none;
+    --label-smallTextTransform: none;
+    --CTAFontSize: 16px;
+    --CTAFontWeight: 500;
+    --CTAFontFamily: sans-serif;
+    --CTALetterSpacing: 2%;
+    --CTALineHeight: 160%;
+    --CTATextDecoration: none;
+    --CTATextTransform: uppercase;
+    --CTA-SmallFontSize: 14px;
+    --CTA-SmallFontWeight: 600;
+    --CTA-SmallFontFamily: sans-serif;
+    --CTA-SmallLetterSpacing: 1.75%;
+    --CTA-SmallLineHeight: 160%;
+    --CTA-SmallTextDecoration: none;
+    --CTA-SmallTextTransform: none;
+    --smallFontSize: 10.8px;
+    --smallFontWeight: 500;
+    --smallFontFamily: sans-serif;
+    --smallLetterSpacing: 0.13%;
+    --smallLineHeight: 160%;
+    --smallTextDecoration: none;
+    --smallTextTransform: none;
+    --small-semiboldFontSize: 10.8px;
+    --small-semiboldFontWeight: 700;
+    --small-semiboldFontFamily: sans-serif;
+    --small-semiboldLetterSpacing: 0.13%;
+    --small-semiboldLineHeight: 160%;
+    --small-semiboldTextDecoration: none;
+    --small-semiboldTextTransform: none;
+    --statFontSize: 48px;
+    --statFontWeight: 700;
+    --statFontFamily: sans-serif;
+    --statLetterSpacing: 6%;
+    --statLineHeight: 160%;
+    --statTextDecoration: none;
+    --statTextTransform: none;
+    --dropdown-elevation: var(--elevation-2);
+    --dropdown-radius: 1;
+    --dropdown-focus-bg: linear-gradient(
+        90deg,
+        var(--button) var(--dropdown-focus-theme),
+        var(--transparent) var(--dropdown-focus-theme)
+    );
+    --dm-dropdown-focus-bg: linear-gradient(
+        90deg,
+        var(--dm-button) var(--dropdown-focus-theme),
+        var(--transparent) var(--dropdown-focus-theme)
+    );
+    --dropdown-hover-style: 100%;
+    --dropdown-bottom-hover-bg: linear-gradient(
+        0deg,
+        var(--button-half) var(--dropdown-focus-theme),
+        var(--transparent) var(--dropdown-focus-theme)
+    ) !important;
+    --dm-dropdown-bottom-hover-bg: linear-gradient(
+        0deg,
+        var(--dm-button) var(--dropdown-focus-theme),
+        var(--transparent) var(--dropdown-focus-theme)
+    ) !important;
+    --buttonTypography: var(--CTAFontWeight) var(--CTAFontSize) /
+        var(--CTALineHeight) var(--CTAFontFamily);
+    --buttonTextDecoration: var(--CTATextDecoration);
+    --buttonTextTransform: var(--CTATextTransform);
+    --buttonLetterSpacing: var(--CTALetterSpacing);
+    --button-padding: 3;
+    --button-border: 2;
+    --button-radius: 3;
+    --button-minwidth: 5;
+    --button-height: 5;
+    --button-elevation: var(--elevation-1);
+    --button-bevel: var(--bevel-0);
+    --button-shadow: var(--button-elevation), var(--button-bevel);
+    --sm-button-height: 4;
+    --sm-button-padding: 2;
+    --sm-buttonTypography: var(--CTA-SmallFontWeight) var(--CTA-SmallFontSize) /
+        var(--CTA-SmallLineHeight) var(--CTA-SmallFontFamily);
+    --sm-buttonTextDecoration: var(--CTA-SmallTextDecoration);
+    --sm-buttonTextTransform: var(--CTA-SmallTextTransform);
+    --sm-buttonLetterSpacing: var(--CTA-SmallLetterSpacing);
+    --groupButton-radius: calc(var(--radius-1) * var(--button-radius) * 1.6);
+    --chip-minwidth: 40px;
+    --chip-height: 5;
+    --chip-radius: 2;
+    --chip-padding: 2;
+    --chip-elevation: var(--elevation-0);
+    --chip-bevel: var(--bevel-0);
+    --chipTypography: var(--captionFontWeight) var(--captionFontSize) /
+        var(--captionLineHeight) var(--captionFontFamily);
+    --chipTextTransform: var(--captionTextTransform);
+    --chipLetterSpacing: var(--captionLetterSpacing);
+    --switch-height: var(--spacing-3);
+    --switch-radius: 3;
+    --switch-bar-height: 0.5;
+    --switch-bar-radius: 0.5;
+    --card-padding: 2;
+    --card-gap: 2;
+    --card-radius: 3;
+    --card-elevation: var(--elevation-2);
+    --card-bevel: var(--bevel-0);
+    --card-border: var(--border-1);
+    --card-border-color: var(--border);
+    --card-shadow: var(--card-elevation), var(--card-bevel);
+    --modal-radius: 3;
+    --modal-elevation: var(--elevation-4);
+    --modal-overlay: #121212;
+    --modal-padding: 2;
+    --modal-border: var(--spacing-2);
+    --modal-shadow: var(--modal-elevation);
+    --dmtooltip: ;
+    --tooltip-padding: 2;
+    --tooltip-border: var(--border-1);
+    --tooltip-elevation: 0;
+    --toast-radius: 1;
+    --toast-padding: 2;
+    --toast-elevation: var(--elevation-2);
+    --toast-bevel: var(--bevel-0);
+    --toast-boxshadow: var(--toast-elevation), var(--toast-bevel);
+    --image-elevation: var(--elevation-0);
+    --image-radius: 2;
+    --inline-image-height: 7;
+    --inline-image-radius: 1;
+    --image-shadow: var(--image-elevation);
+    --avatar-border: 4;
+    --avatar-border-lg: 6;
+    --avatar-elevation: var(--elevation-0);
+    --avatar-shadow: var(--avatar-elevation);
+    --sliderhandleHeight: 3;
+    --sliderhandleRadius: 8;
+    --sliderhandleElevation: var(--elevation-0);
+    --sliderbarHeight: 1;
+    --barInBevel: var(--bevel-0);
+    --popoverRadius: 1;
+    --popoverElevation: var(--elevation-2);
+    --popoverBevel: var(--bevel-0);
+    --popoverShadow: var(--popoverElevation), var(--popoverBevel);
+    --section-padding: 4;
+    --p-padding: 1;
+    --footer-padding: 5;
+    --copyright-padding: 2;
+    --footer: var(--gray-900);
+    --on-footer: var(--on-gray-900);
+    --dm-footer: var(--dm-gray-900);
+    --dm-on-footer: var(--dm-on-gray-900);
+    --copyright: var(--nearblack);
+    --on-copyright: var(--on-nearblack);
+    --dm-copyright: var(--nearblack);
+    --dm-on-copyright: var(--dm-on-nearblack);
+    --navbarPrimary-padding: 1;
+    --navbarSecondary-padding: 1;
+    --navbarSecondary-stickyTop: 0;
+    --leftNav: var(--gray-100);
+    --on-leftNav: var(--on-gray-100);
+    --leftNavPadding: var(--spacing-2);
+    --hero-gap: 3;
+    --hero-padding: 3;
+    --hero-titleTypography: var(--Display1FontWeight) var(--Display1FontSize) /
+        var(--Display1LineHeight) var(--Display1FontFamily);
+    --hero-titleTransform: var(--Display1TextTransform);
+    --hero-titleSpacing: var(--Display1LetterSpacing);
+    --hero-bodyTypography: var(--body1FontWeight) var(--body1FontSize) /
+        var(--body1LineHeight) var(--body1FontFamily);
+    --hero-bodyTransform: var(--body1TextTransform);
+    --hero-bodySpacing: var(--body1LetterSpacing);
+    --hero-justify-content: flex-start;
+    --tableheaderTypography: var(--label-1FontWeight) var(--label-1FontSize) /
+        var(--label-1LineHeight) var(--label-1FontFamily);
+    --tableheaderSpacing: var(--label-1LetterSpacing);
+    --tableheaderTransform: var(--label-1TextTransform);
+    --tablebodyTypography: var(--body1FontWeight) var(--body1FontSize) /
+        var(--body1LineHeight) var(--body1FontFamily);
+    --tablebodySpacing: var(--body1LetterSpacing);
+    --tablebodyTransform: var(--body1TextTransform);
+    --tableheaderPadding: 1;
+    --tablebodyPadding: 1;
+    --Gray-0: #ffffff;
+    --on-Gray-0: #121212;
+    --Gray-100: #e0e0e0;
+    --on-Gray-100: #121212;
+    --Gray-200: #c2c2c2;
+    --on-Gray-200: #121212;
+    --Gray-300: #a5a5a5;
+    --on-Gray-300: #121212;
+    --Gray-400: #888888;
+    --on-Gray-400: #121212;
+    --Gray-500: #6d6d6d;
+    --on-Gray-500: #ffffff;
+    --Gray-600: #535353;
+    --on-Gray-600: #ffffff;
+    --Gray-700: #3a3a3a;
+    --on-Gray-700: #ffffff;
+    --Gray-800: #232323;
+    --on-Gray-800: #ffffff;
+    --Gray-900: #0b0b0b;
+    --on-Gray-900: #ffffff;
+    --dm-Gray-0: #ffffff;
+    --dm-on-Gray-0: #121212;
+    --dm-Gray-100: #e0e0e0;
+    --dm-on-Gray-100: #121212;
+    --dm-Gray-200: #c2c2c2;
+    --dm-on-Gray-200: #121212;
+    --dm-Gray-300: #a5a5a5;
+    --dm-on-Gray-300: #121212;
+    --dm-Gray-400: #888888;
+    --dm-on-Gray-400: #121212;
+    --dm-Gray-500: #7d7d7d;
+    --dm-on-Gray-500: #121212;
+    --dm-Gray-600: #4b4b4b;
+    --dm-on-Gray-600: rgba(255, 255, 255, 0.6);
+    --dm-Gray-700: #3a3a3a;
+    --dm-on-Gray-700: rgba(255, 255, 255, 0.6);
+    --dm-Gray-800: #232323;
+    --dm-on-Gray-800: rgba(255, 255, 255, 0.6);
+    --dm-Gray-900: #0b0b0b;
+    --dm-on-Gray-900: rgba(255, 255, 255, 0.6);
+    --Cobalt-0: #e7e9fa;
+    --on-Cobalt-0: #121212;
+    --Cobalt-100: #ccd1f4;
+    --on-Cobalt-100: #121212;
+    --Cobalt-200: #b2b8ef;
+    --on-Cobalt-200: #121212;
+    --Cobalt-300: #98a0e9;
+    --on-Cobalt-300: #121212;
+    --Cobalt-400: #7e88e4;
+    --on-Cobalt-400: #121212;
+    --Cobalt-500: #6672e2;
+    --on-Cobalt-500: #121212;
+    --Cobalt-600: #4857d8;
+    --on-Cobalt-600: #ffffff;
+    --Cobalt-700: #2b3cd2;
+    --on-Cobalt-700: #ffffff;
+    --Cobalt-800: #161fa7;
+    --on-Cobalt-800: #ffffff;
+    --Cobalt-900: #00007a;
+    --on-Cobalt-900: #ffffff;
+    --dm-Cobalt-0: #caceeb;
+    --dm-on-Cobalt-0: #121212;
+    --dm-Cobalt-100: #b8bce4;
+    --dm-on-Cobalt-100: #121212;
+    --dm-Cobalt-200: #a5abdd;
+    --dm-on-Cobalt-200: #121212;
+    --dm-Cobalt-300: #939ad6;
+    --dm-on-Cobalt-300: #121212;
+    --dm-Cobalt-400: #8188ce;
+    --dm-on-Cobalt-400: #121212;
+    --dm-Cobalt-500: #6d77c8;
+    --dm-on-Cobalt-500: #121212;
+    --dm-Cobalt-600: #6973de;
+    --dm-on-Cobalt-600: #121212;
+    --dm-Cobalt-700: #36429d;
+    --dm-on-Cobalt-700: rgba(255, 255, 255, 0.6);
+    --dm-Cobalt-800: #161fa7;
+    --dm-on-Cobalt-800: rgba(255, 255, 255, 0.6);
+    --dm-Cobalt-900: #00007a;
+    --dm-on-Cobalt-900: rgba(255, 255, 255, 0.6);
+    --Cyan-0: #dfecf5;
+    --on-Cyan-0: #121212;
+    --Cyan-100: #b8d5e9;
+    --on-Cyan-100: #121212;
+    --Cyan-200: #92bfdc;
+    --on-Cyan-200: #121212;
+    --Cyan-300: #6ba8d0;
+    --on-Cyan-300: #121212;
+    --Cyan-400: #4491c3;
+    --on-Cyan-400: #121212;
+    --Cyan-500: #1c79b6;
+    --on-Cyan-500: #ffffff;
+    --Cyan-600: #145d97;
+    --on-Cyan-600: #ffffff;
+    --Cyan-700: #0d4379;
+    --on-Cyan-700: #ffffff;
+    --Cyan-800: #062a5c;
+    --on-Cyan-800: #ffffff;
+    --Cyan-900: #001241;
+    --on-Cyan-900: #ffffff;
+    --dm-Cyan-0: #a5cae2;
+    --dm-on-Cyan-0: #121212;
+    --dm-Cyan-100: #8abad9;
+    --dm-on-Cyan-100: #121212;
+    --dm-Cyan-200: #6faad1;
+    --dm-on-Cyan-200: #121212;
+    --dm-Cyan-300: #549ac8;
+    --dm-on-Cyan-300: #121212;
+    --dm-Cyan-400: #388abf;
+    --dm-on-Cyan-400: #121212;
+    --dm-Cyan-500: #1c82c8;
+    --dm-on-Cyan-500: #121212;
+    --dm-Cyan-600: #144c85;
+    --dm-on-Cyan-600: rgba(255, 255, 255, 0.6);
+    --dm-Cyan-700: #0d4379;
+    --dm-on-Cyan-700: rgba(255, 255, 255, 0.6);
+    --dm-Cyan-800: #062a5c;
+    --dm-on-Cyan-800: rgba(255, 255, 255, 0.6);
+    --dm-Cyan-900: #001241;
+    --dm-on-Cyan-900: rgba(255, 255, 255, 0.6);
+    --Teal-0: #e0edee;
+    --on-Teal-0: #121212;
+    --Teal-100: #bcd8da;
+    --on-Teal-100: #121212;
+    --Teal-200: #97c4c6;
+    --on-Teal-200: #121212;
+    --Teal-300: #73b0b3;
+    --on-Teal-300: #121212;
+    --Teal-400: #4f9b9f;
+    --on-Teal-400: #121212;
+    --Teal-500: #2a898e;
+    --on-Teal-500: #121212;
+    --Teal-600: #047176;
+    --on-Teal-600: #ffffff;
+    --Teal-700: #035155;
+    --on-Teal-700: #ffffff;
+    --Teal-800: #013337;
+    --on-Teal-800: #ffffff;
+    --Teal-900: #00181b;
+    --on-Teal-900: #ffffff;
+    --dm-Teal-0: #acd0d2;
+    --dm-on-Teal-0: #121212;
+    --dm-Teal-100: #90c0c3;
+    --dm-on-Teal-100: #121212;
+    --dm-Teal-200: #75b1b4;
+    --dm-on-Teal-200: #121212;
+    --dm-Teal-300: #59a1a5;
+    --dm-on-Teal-300: #121212;
+    --dm-Teal-400: #3d9195;
+    --dm-on-Teal-400: #121212;
+    --dm-Teal-500: #218a8f;
+    --dm-on-Teal-500: #121212;
+    --dm-Teal-600: #048b90;
+    --dm-on-Teal-600: #121212;
+    --dm-Teal-700: #034e52;
+    --dm-on-Teal-700: rgba(255, 255, 255, 0.6);
+    --dm-Teal-800: #013337;
+    --dm-on-Teal-800: rgba(255, 255, 255, 0.6);
+    --dm-Teal-900: #00181b;
+    --dm-on-Teal-900: rgba(255, 255, 255, 0.6);
+    --Green-0: #e1ece2;
+    --on-Green-0: #121212;
+    --Green-100: #bed5bf;
+    --on-Green-100: #121212;
+    --Green-200: #9abf9c;
+    --on-Green-200: #121212;
+    --Green-300: #78a97a;
+    --on-Green-300: #121212;
+    --Green-400: #559358;
+    --on-Green-400: #121212;
+    --Green-500: #327d35;
+    --on-Green-500: #ffffff;
+    --Green-600: #246327;
+    --on-Green-600: #ffffff;
+    --Green-700: #174919;
+    --on-Green-700: #ffffff;
+    --Green-800: #0b320c;
+    --on-Green-800: #ffffff;
+    --Green-900: #001c00;
+    --on-Green-900: #ffffff;
+    --dm-Green-0: #accaad;
+    --dm-on-Green-0: #121212;
+    --dm-Green-100: #94bb95;
+    --dm-on-Green-100: #121212;
+    --dm-Green-200: #7bab7d;
+    --dm-on-Green-200: #121212;
+    --dm-Green-300: #639c65;
+    --dm-on-Green-300: #121212;
+    --dm-Green-400: #4b8c4d;
+    --dm-on-Green-400: #121212;
+    --dm-Green-500: #418c44;
+    --dm-on-Green-500: #121212;
+    --dm-Green-600: #245427;
+    --dm-on-Green-600: rgba(255, 255, 255, 0.6);
+    --dm-Green-700: #174919;
+    --dm-on-Green-700: rgba(255, 255, 255, 0.6);
+    --dm-Green-800: #0b320c;
+    --dm-on-Green-800: rgba(255, 255, 255, 0.6);
+    --dm-Green-900: #001c00;
+    --dm-on-Green-900: rgba(255, 255, 255, 0.6);
+    --Amber-0: #feedca;
+    --on-Amber-0: #121212;
+    --Amber-100: #fdd175;
+    --on-Amber-100: #121212;
+    --Amber-200: #fcb116;
+    --on-Amber-200: #121212;
+    --Amber-300: #de9613;
+    --on-Amber-300: #121212;
+    --Amber-400: #c17b0f;
+    --on-Amber-400: #121212;
+    --Amber-500: #a5610c;
+    --on-Amber-500: #ffffff;
+    --Amber-600: #8a4809;
+    --on-Amber-600: #ffffff;
+    --Amber-700: #6f3006;
+    --on-Amber-700: #ffffff;
+    --Amber-800: #551803;
+    --on-Amber-800: #ffffff;
+    --Amber-900: #3b0000;
+    --on-Amber-900: #ffffff;
+    --dm-Amber-0: #cca146;
+    --dm-on-Amber-0: #121212;
+    --dm-Amber-100: #cca146;
+    --dm-on-Amber-100: #121212;
+    --dm-Amber-200: #cca146;
+    --dm-on-Amber-200: #121212;
+    --dm-Amber-300: #c68f2b;
+    --dm-on-Amber-300: #121212;
+    --dm-Amber-400: #c17b0f;
+    --dm-on-Amber-400: #121212;
+    --dm-Amber-500: #b76a0c;
+    --dm-on-Amber-500: #121212;
+    --dm-Amber-600: #793709;
+    --dm-on-Amber-600: rgba(255, 255, 255, 0.6);
+    --dm-Amber-700: #6f3006;
+    --dm-on-Amber-700: rgba(255, 255, 255, 0.6);
+    --dm-Amber-800: #551803;
+    --dm-on-Amber-800: rgba(255, 255, 255, 0.6);
+    --dm-Amber-900: #3b0000;
+    --dm-on-Amber-900: rgba(255, 255, 255, 0.6);
+    --Orange-0: #fee9d6;
+    --on-Orange-0: #121212;
+    --Orange-100: #fdca9e;
+    --on-Orange-100: #121212;
+    --Orange-200: #fda962;
+    --on-Orange-200: #121212;
+    --Orange-300: #fc831f;
+    --on-Orange-300: #121212;
+    --Orange-400: #dc6c1a;
+    --on-Orange-400: #121212;
+    --Orange-500: #bc5514;
+    --on-Orange-500: #ffffff;
+    --Orange-600: #9e3f0f;
+    --on-Orange-600: #ffffff;
+    --Orange-700: #802a0a;
+    --on-Orange-700: #ffffff;
+    --Orange-800: #621405;
+    --on-Orange-800: #ffffff;
+    --Orange-900: #460000;
+    --on-Orange-900: #ffffff;
+    --dm-Orange-0: #e1b38e;
+    --dm-on-Orange-0: #121212;
+    --dm-Orange-100: #dba67a;
+    --dm-on-Orange-100: #121212;
+    --dm-Orange-200: #d49765;
+    --dm-on-Orange-200: #121212;
+    --dm-Orange-300: #ce874d;
+    --dm-on-Orange-300: #121212;
+    --dm-Orange-400: #c37033;
+    --dm-on-Orange-400: #121212;
+    --dm-Orange-500: #ca5c14;
+    --dm-on-Orange-500: #121212;
+    --dm-Orange-600: #d0580f;
+    --dm-on-Orange-600: #121212;
+    --dm-Orange-700: #7a2a0a;
+    --dm-on-Orange-700: rgba(255, 255, 255, 0.6);
+    --dm-Orange-800: #621405;
+    --dm-on-Orange-800: rgba(255, 255, 255, 0.6);
+    --dm-Orange-900: #460000;
+    --dm-on-Orange-900: rgba(255, 255, 255, 0.6);
+    --Red-0: #f9e7e7;
+    --on-Red-0: #121212;
+    --Red-100: #f1cbcb;
+    --on-Red-100: #121212;
+    --Red-200: #eaaeae;
+    --on-Red-200: #121212;
+    --Red-300: #e29191;
+    --on-Red-300: #121212;
+    --Red-400: #da7373;
+    --on-Red-400: #121212;
+    --Red-500: #d35252;
+    --on-Red-500: #121212;
+    --Red-600: #c62828;
+    --on-Red-600: #ffffff;
+    --Red-700: #9c1a1a;
+    --on-Red-700: #ffffff;
+    --Red-800: #740c0c;
+    --on-Red-800: #ffffff;
+    --Red-900: #4f0000;
+    --on-Red-900: #ffffff;
+    --dm-Red-0: #eebebe;
+    --dm-on-Red-0: #121212;
+    --dm-Red-100: #e8a8a8;
+    --dm-on-Red-100: #121212;
+    --dm-Red-200: #e29292;
+    --dm-on-Red-200: #121212;
+    --dm-Red-300: #dc7b7b;
+    --dm-on-Red-300: #121212;
+    --dm-Red-400: #d66363;
+    --dm-on-Red-400: #121212;
+    --dm-Red-500: #d74d4d;
+    --dm-on-Red-500: #121212;
+    --dm-Red-600: #f02828;
+    --dm-on-Red-600: #121212;
+    --dm-Red-700: #841a1a;
+    --dm-on-Red-700: rgba(255, 255, 255, 0.6);
+    --dm-Red-800: #740c0c;
+    --dm-on-Red-800: rgba(255, 255, 255, 0.6);
+    --dm-Red-900: #4f0000;
+    --dm-on-Red-900: rgba(255, 255, 255, 0.6);
+    --Pink-0: #f9e4ed;
+    --on-Pink-0: #121212;
+    --Pink-100: #f2c3d7;
+    --on-Pink-100: #121212;
+    --Pink-200: #eba1c1;
+    --on-Pink-200: #121212;
+    --Pink-300: #e37eaa;
+    --on-Pink-300: #121212;
+    --Pink-400: #db5891;
+    --on-Pink-400: #121212;
+    --Pink-500: #d02670;
+    --on-Pink-500: #ffffff;
+    --Pink-600: #ad1c55;
+    --on-Pink-600: #ffffff;
+    --Pink-700: #8c123c;
+    --on-Pink-700: #ffffff;
+    --Pink-800: #6c0923;
+    --on-Pink-800: #ffffff;
+    --Pink-900: #4e000c;
+    --on-Pink-900: #ffffff;
+    --dm-Pink-0: #e5bbcd;
+    --dm-on-Pink-0: #121212;
+    --dm-Pink-100: #dda6be;
+    --dm-on-Pink-100: #121212;
+    --dm-Pink-200: #d591ae;
+    --dm-on-Pink-200: #121212;
+    --dm-Pink-300: #cc7a9d;
+    --dm-on-Pink-300: #121212;
+    --dm-Pink-400: #c2608b;
+    --dm-on-Pink-400: #121212;
+    --dm-Pink-500: #d14c80;
+    --dm-on-Pink-500: #121212;
+    --dm-Pink-600: #861c3a;
+    --dm-on-Pink-600: rgba(255, 255, 255, 0.6);
+    --dm-Pink-700: #821232;
+    --dm-on-Pink-700: rgba(255, 255, 255, 0.6);
+    --dm-Pink-800: #6c0923;
+    --dm-on-Pink-800: rgba(255, 255, 255, 0.6);
+    --dm-Pink-900: #4e000c;
+    --dm-on-Pink-900: rgba(255, 255, 255, 0.6);
+    --Plumb-0: #f4e6f7;
+    --on-Plumb-0: #121212;
+    --Plumb-100: #e8c9ed;
+    --on-Plumb-100: #121212;
+    --Plumb-200: #dbade3;
+    --on-Plumb-200: #121212;
+    --Plumb-300: #ce90d9;
+    --on-Plumb-300: #121212;
+    --Plumb-400: #c172cf;
+    --on-Plumb-400: #121212;
+    --Plumb-500: #b654c6;
+    --on-Plumb-500: #121212;
+    --Plumb-600: #a42fb8;
+    --on-Plumb-600: #ffffff;
+    --Plumb-700: #7d1e93;
+    --on-Plumb-700: #ffffff;
+    --Plumb-800: #570f70;
+    --on-Plumb-800: #ffffff;
+    --Plumb-900: #35004f;
+    --on-Plumb-900: #ffffff;
+    --dm-Plumb-0: #e2bde9;
+    --dm-on-Plumb-0: #121212;
+    --dm-Plumb-100: #d8a7e1;
+    --dm-on-Plumb-100: #121212;
+    --dm-Plumb-200: #cf91da;
+    --dm-on-Plumb-200: #121212;
+    --dm-Plumb-300: #c57bd2;
+    --dm-on-Plumb-300: #121212;
+    --dm-Plumb-400: #bb63ca;
+    --dm-on-Plumb-400: #121212;
+    --dm-Plumb-500: #ba50cc;
+    --dm-on-Plumb-500: #121212;
+    --dm-Plumb-600: #cc2fe0;
+    --dm-on-Plumb-600: #121212;
+    --dm-Plumb-700: #6e1e84;
+    --dm-on-Plumb-700: rgba(255, 255, 255, 0.6);
+    --dm-Plumb-800: #570f70;
+    --dm-on-Plumb-800: rgba(255, 255, 255, 0.6);
+    --dm-Plumb-900: #35004f;
+    --dm-on-Plumb-900: rgba(255, 255, 255, 0.6);
+    --Purple-0: #ede8f6;
+    --on-Purple-0: #121212;
+    --Purple-100: #d8ceec;
+    --on-Purple-100: #121212;
+    --Purple-200: #c4b4e2;
+    --on-Purple-200: #121212;
+    --Purple-300: #af9bd8;
+    --on-Purple-300: #121212;
+    --Purple-400: #9b82cf;
+    --on-Purple-400: #121212;
+    --Purple-500: #8a6ccb;
+    --on-Purple-500: #121212;
+    --Purple-600: #734fbb;
+    --on-Purple-600: #ffffff;
+    --Purple-700: #5e35b1;
+    --on-Purple-700: #ffffff;
+    --Purple-800: #301b89;
+    --on-Purple-800: #ffffff;
+    --Purple-900: #00005f;
+    --on-Purple-900: #ffffff;
+    --dm-Purple-0: #d0c4e8;
+    --dm-on-Purple-0: #121212;
+    --dm-Purple-100: #c0afe0;
+    --dm-on-Purple-100: #121212;
+    --dm-Purple-200: #af9bd8;
+    --dm-on-Purple-200: #121212;
+    --dm-Purple-300: #9f87d0;
+    --dm-on-Purple-300: #121212;
+    --dm-Purple-400: #8f73c9;
+    --dm-on-Purple-400: #121212;
+    --dm-Purple-500: #8969d5;
+    --dm-on-Purple-500: #121212;
+    --dm-Purple-600: #5d3895;
+    --dm-on-Purple-600: rgba(255, 255, 255, 0.6);
+    --dm-Purple-700: #523299;
+    --dm-on-Purple-700: rgba(255, 255, 255, 0.6);
+    --dm-Purple-800: #301b89;
+    --dm-on-Purple-800: rgba(255, 255, 255, 0.6);
+    --dm-Purple-900: #00005f;
+    --dm-on-Purple-900: rgba(255, 255, 255, 0.6);
+    --Midnight-0: #e9e9eb;
+    --on-Midnight-0: #121212;
+    --Midnight-100: #d1d1d5;
+    --on-Midnight-100: #121212;
+    --Midnight-200: #b8b8c0;
+    --on-Midnight-200: #121212;
+    --Midnight-300: #a1a1ac;
+    --on-Midnight-300: #121212;
+    --Midnight-400: #8a8a98;
+    --on-Midnight-400: #121212;
+    --Midnight-500: #747484;
+    --on-Midnight-500: #ffffff;
+    --Midnight-600: #5f5f71;
+    --on-Midnight-600: #ffffff;
+    --Midnight-700: #4a4a5f;
+    --on-Midnight-700: #ffffff;
+    --Midnight-800: #36364e;
+    --on-Midnight-800: #ffffff;
+    --Midnight-900: #181631;
+    --on-Midnight-900: #ffffff;
+    --dm-Midnight-0: #c9c9cf;
+    --dm-on-Midnight-0: #121212;
+    --dm-Midnight-100: #b5b5bd;
+    --dm-on-Midnight-100: #121212;
+    --dm-Midnight-200: #a1a1ac;
+    --dm-on-Midnight-200: #121212;
+    --dm-Midnight-300: #8d8d9a;
+    --dm-on-Midnight-300: #121212;
+    --dm-Midnight-400: #7b7b8b;
+    --dm-on-Midnight-400: #121212;
+    --dm-Midnight-500: #7b7b8d;
+    --dm-on-Midnight-500: #121212;
+    --dm-Midnight-600: #4a4a5e;
+    --dm-on-Midnight-600: rgba(255, 255, 255, 0.6);
+    --dm-Midnight-700: #44445a;
+    --dm-on-Midnight-700: rgba(255, 255, 255, 0.6);
+    --dm-Midnight-800: #33334b;
+    --dm-on-Midnight-800: rgba(255, 255, 255, 0.6);
+    --dm-Midnight-900: #181631;
+    --dm-on-Midnight-900: rgba(255, 255, 255, 0.6);
+    --Slate-0: #e8eced;
+    --on-Slate-0: #121212;
+    --Slate-100: #ced6d9;
+    --on-Slate-100: #121212;
+    --Slate-200: #b5c0c5;
+    --on-Slate-200: #121212;
+    --Slate-300: #9cabb2;
+    --on-Slate-300: #121212;
+    --Slate-400: #83969f;
+    --on-Slate-400: #121212;
+    --Slate-500: #6b828c;
+    --on-Slate-500: #121212;
+    --Slate-600: #546e7a;
+    --on-Slate-600: #ffffff;
+    --Slate-700: #364d58;
+    --on-Slate-700: #ffffff;
+    --Slate-800: #1a2e38;
+    --on-Slate-800: #ffffff;
+    --Slate-900: #00101a;
+    --on-Slate-900: #ffffff;
+    --dm-Slate-0: #c3ccd1;
+    --dm-on-Slate-0: #121212;
+    --dm-Slate-100: #b0bcc2;
+    --dm-on-Slate-100: #121212;
+    --dm-Slate-200: #9dacb3;
+    --dm-on-Slate-200: #121212;
+    --dm-Slate-300: #8a9ca4;
+    --dm-on-Slate-300: #121212;
+    --dm-Slate-400: #788c96;
+    --dm-on-Slate-400: #121212;
+    --dm-Slate-500: #69808b;
+    --dm-on-Slate-500: #121212;
+    --dm-Slate-600: #67818d;
+    --dm-on-Slate-600: #121212;
+    --dm-Slate-700: #344b56;
+    --dm-on-Slate-700: rgba(255, 255, 255, 0.6);
+    --dm-Slate-800: #1a2e38;
+    --dm-on-Slate-800: rgba(255, 255, 255, 0.6);
+    --dm-Slate-900: #00101a;
+    --dm-on-Slate-900: rgba(255, 255, 255, 0.6);
+    --primary: #d02670;
+    --primary-half: rgba(208, 38, 112, 0.5);
+    --primary-quarter: rgba(208, 38, 112, 0.25);
+    --on-primary: #ffffff;
+    --on-primary-half: rgba(255, 255, 255, 0.5);
+    --on-primary-quarter: rgba(255, 255, 255, 0.25);
+    --dm-primary: #d14c80;
+    --dm-primary-half: rgba(209, 76, 128, 0.5);
+    --dm-primary-quarter: rgba(209, 76, 128, 0.25);
+    --dm-on-primary: #121212;
+    --dm-on-primary-half: rgba(18, 18, 18, 0.5);
+    --dm-on-primary-quarter: rgba(18, 18, 18, 0.25);
+    --primary-0: #f9e4ed;
+    --on-primary-0: #121212;
+    --primary-100: #f2c3d7;
+    --on-primary-100: #121212;
+    --primary-200: #eba1c1;
+    --on-primary-200: #121212;
+    --primary-300: #e37eaa;
+    --on-primary-300: #121212;
+    --primary-400: #db5891;
+    --on-primary-400: #121212;
+    --primary-500: #d02670;
+    --on-primary-500: #ffffff;
+    --primary-600: #ad1c55;
+    --on-primary-600: #ffffff;
+    --primary-700: #8c123c;
+    --on-primary-700: #ffffff;
+    --primary-800: #6c0923;
+    --on-primary-800: #ffffff;
+    --primary-900: #4e000c;
+    --on-primary-900: #ffffff;
+    --dm-primary-0: #e5bbcd;
+    --dm-on-primary-0: #121212;
+    --dm-primary-100: #dda6be;
+    --dm-on-primary-100: #121212;
+    --dm-primary-200: #d591ae;
+    --dm-on-primary-200: #121212;
+    --dm-primary-300: #cc7a9d;
+    --dm-on-primary-300: #121212;
+    --dm-primary-400: #c2608b;
+    --dm-on-primary-400: #121212;
+    --dm-primary-500: #d14c80;
+    --dm-on-primary-500: #121212;
+    --dm-primary-600: #861c3a;
+    --dm-on-primary-600: rgba(255, 255, 255, 0.6);
+    --dm-primary-700: #821232;
+    --dm-on-primary-700: rgba(255, 255, 255, 0.6);
+    --dm-primary-800: #6c0923;
+    --dm-on-primary-800: rgba(255, 255, 255, 0.6);
+    --dm-primary-900: #4e000c;
+    --dm-on-primary-900: rgba(255, 255, 255, 0.6);
+    --primaryDarkBG: #340008;
+    --secondaryDarkBG: #230005;
+    --secondary: #181631;
+    --on-secondary: #ffffff;
+    --dm-secondary: #181631;
+    --dm-on-secondary: rgba(255, 255, 255, 0.6);
+    --secondary-0: #e9e9eb;
+    --on-secondary-0: #121212;
+    --secondary-100: #d1d1d5;
+    --on-secondary-100: #121212;
+    --secondary-200: #b8b8c0;
+    --on-secondary-200: #121212;
+    --secondary-300: #a1a1ac;
+    --on-secondary-300: #121212;
+    --secondary-400: #8a8a98;
+    --on-secondary-400: #121212;
+    --secondary-500: #747484;
+    --on-secondary-500: #ffffff;
+    --secondary-600: #5f5f71;
+    --on-secondary-600: #ffffff;
+    --secondary-700: #4a4a5f;
+    --on-secondary-700: #ffffff;
+    --secondary-800: #36364e;
+    --on-secondary-800: #ffffff;
+    --secondary-900: #181631;
+    --on-secondary-900: #ffffff;
+    --dm-secondary-0: #c9c9cf;
+    --dm-on-secondary-0: #121212;
+    --dm-secondary-100: #b5b5bd;
+    --dm-on-secondary-100: #121212;
+    --dm-secondary-200: #a1a1ac;
+    --dm-on-secondary-200: #121212;
+    --dm-secondary-300: #8d8d9a;
+    --dm-on-secondary-300: #121212;
+    --dm-secondary-400: #7b7b8b;
+    --dm-on-secondary-400: #121212;
+    --dm-secondary-500: #7b7b8d;
+    --dm-on-secondary-500: #121212;
+    --dm-secondary-600: #4a4a5e;
+    --dm-on-secondary-600: rgba(255, 255, 255, 0.6);
+    --dm-secondary-700: #44445a;
+    --dm-on-secondary-700: rgba(255, 255, 255, 0.6);
+    --dm-secondary-800: #33334b;
+    --dm-on-secondary-800: rgba(255, 255, 255, 0.6);
+    --dm-secondary-900: #181631;
+    --dm-on-secondary-900: rgba(255, 255, 255, 0.6);
+    --tertiary: #145d97;
+    --on-tertiary: #ffffff;
+    --dm-tertiary: #144c85;
+    --dm-on-tertiary: rgba(255, 255, 255, 0.6);
+    --tertiary-0: #dfecf5;
+    --on-tertiary-0: #121212;
+    --tertiary-100: #b8d5e9;
+    --on-tertiary-100: #121212;
+    --tertiary-200: #92bfdc;
+    --on-tertiary-200: #121212;
+    --tertiary-300: #6ba8d0;
+    --on-tertiary-300: #121212;
+    --tertiary-400: #4491c3;
+    --on-tertiary-400: #121212;
+    --tertiary-500: #1c79b6;
+    --on-tertiary-500: #ffffff;
+    --tertiary-600: #145d97;
+    --on-tertiary-600: #ffffff;
+    --tertiary-700: #0d4379;
+    --on-tertiary-700: #ffffff;
+    --tertiary-800: #062a5c;
+    --on-tertiary-800: #ffffff;
+    --tertiary-900: #001241;
+    --on-tertiary-900: #ffffff;
+    --dm-tertiary-0: #a5cae2;
+    --dm-on-tertiary-0: #121212;
+    --dm-tertiary-100: #8abad9;
+    --dm-on-tertiary-100: #121212;
+    --dm-tertiary-200: #6faad1;
+    --dm-on-tertiary-200: #121212;
+    --dm-tertiary-300: #549ac8;
+    --dm-on-tertiary-300: #121212;
+    --dm-tertiary-400: #388abf;
+    --dm-on-tertiary-400: #121212;
+    --dm-tertiary-500: #1c82c8;
+    --dm-on-tertiary-500: #121212;
+    --dm-tertiary-600: #144c85;
+    --dm-on-tertiary-600: rgba(255, 255, 255, 0.6);
+    --dm-tertiary-700: #0d4379;
+    --dm-on-tertiary-700: rgba(255, 255, 255, 0.6);
+    --dm-tertiary-800: #062a5c;
+    --dm-on-tertiary-800: rgba(255, 255, 255, 0.6);
+    --dm-tertiary-900: #001241;
+    --dm-on-tertiary-900: rgba(255, 255, 255, 0.6);
+    --background: #ffffff;
+    --background-secondary: #faf9f6;
+    --border: rgba(0, 0, 0, 0.25);
+    --chip: rgba(0, 0, 0, 0.25);
+    --on-chip: var(--black);
+    --color-drop: var(--Pink-100);
+    --groupButtonBG: var(--white);
+    --on-groupButtonBG: var(--black);
+    --line-color: rgba(0, 0, 0, 0.05);
+    --surface: var(--white);
+    --on-surface: var(--black);
+    --on-background: var(--black);
+    --dm-background: #121212;
+    --dm-background-secondary: #181818;
+    --dm-border: rgba(255, 255, 255, 0.25);
+    --dm-chip: rgba(255, 255, 255, 0.25);
+    --dm-on-chip: var(--white);
+    --dm-color-drop: var(--black);
+    --dm-groupButtonBG: rgba(255, 255, 255, 0.1);
+    --dm-on-groupButtonBG: var(--black);
+    --dm-line-color: rgba(255, 255, 255, 0.05);
+    --dm-surface: #121212;
+    --dm-on-background: rgba(255, 255, 255, 0.6);
+    --elevation-bg-0: #121212;
+    --on-elevation-bg-0: var(--white);
+    --elevation-bg-1: #1d1d1d;
+    --on-elevation-bg-1: var(--white);
+    --elevation-bg-2: #222222;
+    --on-elevation-bg-2: var(--white);
+    --elevation-bg-3: #242424;
+    --on-elevation-bg-3: var(--white);
+    --elevation-bg-4: #272727;
+    --on-elevation-bg-4: var(--white);
+    --elevation-bg-5: #2c2c2c;
+    --on-elevation-bg-5: var(--white);
+    --elevation-bg-6: #2e2e2e;
+    --on-elevation-bg-6: var(--white);
+    --elevation-bg-7: #333333;
+    --on-elevation-bg-7: var(--white);
+    --elevation-bg-8: #353535;
+    --on-elevation-bg-8: var(--white);
+    --elevation-bg-9: #373737;
+    --on-elevation-bg-9: var(--white);
+    --gradient1-a: #4857d8;
+    --on-gradient1-a: #ffffff;
+    --dm-gradient1-a: #828ad0;
+    --dm-on-gradient1-a: #121212;
+    --gradient1-b: #8a6ccb;
+    --on-gradient1-b: #121212;
+    --dm-gradient1-b: #8a6ccb;
+    --dm-on-gradient1-b: #121212;
+    --gradient2-a: #e29191;
+    --on-gradient2-a: #121212;
+    --dm-gradient2-a: #e29191;
+    --dm-on-gradient2-a: #121212;
+    --gradient2-b: #6672e2;
+    --on-gradient2-b: #121212;
+    --dm-gradient2-b: #6672e2;
+    --dm-on-gradient2-b: #121212;
+    --buttonOnWhite: var(--Pink-500);
+    --onbuttonOnWhite: #ffffff;
+    --buttonHalfOnWhite: rgba(208, 38, 112, 0.5);
+    --buttonOnBlack: var(--Pink-500);
+    --onbuttonOnBlack: #ffffff;
+    --buttonHalfOnBlack: rgba(208, 38, 112, 0.5);
+    --buttonOnTertiary: #ffffff;
+    --onbuttonOnTertiary: #121212;
+    --onbuttonHalfOnTertiary: rgba(0, 0, 0, 0.5);
+    --buttonOnGradient1: #121212;
+    --onbuttonOnGradient1: var(--white);
+    --buttonHalfOnGradient1: rgba(18, 18, 18, 0.5);
+    --buttonOnGradient2: #121212;
+    --onbuttonOnGradient2: var(--white);
+    --buttonHalfOnGradient2: rgba(18, 18, 18, 0.5);
+    --buttonOnGradient3: #121212;
+    --onbuttonOnGradient3: #ffffff;
+    --onbuttonHalfOnGradient3: rgba(0, 0, 0, 0.5);
+    --button: var(--Pink-500);
+    --on-button: #ffffff;
+    --button-half: rgba(208, 38, 112, 0.5);
+    --dmbuttonOnWhite: #121212;
+    --dmonbuttonOnWhite: var(--dm-white);
+    --dmbuttonHalfOnWhite: rgba(18, 18, 18, 0.5);
+    --dmbuttonOnBlack: var(--dm-Pink-400);
+    --dmonbuttonOnBlack: #121212;
+    --dmbuttonHalfOnBlack: rgba(194, 96, 139, 0.5);
+    --dmbuttonOnTertiary: rgba(255, 255, 255, 0.6);
+    --dmonbuttonOnTertiary: #121212;
+    --dmHalfbuttonHalfOnTertiary: rgba(255, 255, 255, 0.3);
+    --dmbuttonOnGradient1: #121212;
+    --dmonbuttonOnGradient1: var(--dm-white);
+    --dmbuttonHalfOnGradient1: rgba(18, 18, 18, 0.5);
+    --dmbuttonOnGradient2: #121212;
+    --dmonbuttonOnGradient2: var(--dm-white);
+    --dmbuttonHalfOnGradient2: rgba(18, 18, 18, 0.5);
+    --dmbuttonOnGradient3: rgba(255, 255, 255, 0.6);
+    --dmonbuttonOnGradient3: #121212;
+    --dmHalfbuttonHalfOnGradient3: rgba(255, 255, 255, 0.3);
+    --dm-button: var(--dm-Pink-400);
+    --dm-on-button: #121212;
+    --dm-button-half: rgba(194, 96, 139, 0.5);
+    --dropdown-focus-theme: 100%;
+    --on-dropdown-focus-bg: rgba(255, 255, 255, 1);
+    --on-dropdown-hover-bg: var(--on-surface);
+    --dropdown-hover-bg: linear-gradient(
+        90deg,
+        var(--button-half) var(--dropdown-focus-theme),
+        var(--transparent) var(--dropdown-focus-theme)
+    ) !important;
+    --dm-dropdown-focus-theme: 100%;
+    --dm-on-dropdown-focus-bg: rgba(255, 255, 255, 0.6);
+    --dm-on-dropdown-hover-bg: var(--dm-on-surface);
+    --dm-dropdown-hover-bg: linear-gradient(
+        90deg,
+        var(--dm-button-half) var(--dm-dropdown-focus-theme),
+        var(--transparent) var(--dm-dropdown-focus-theme)
+    ) !important;
+    --iconOnWhite: var(--Midnight-900);
+    --oniconOnWhite: #ffffff;
+    --iconHalfOnWhite: rgba(24, 22, 49, 0.5);
+    --iconOnBlack: #ffffff;
+    --oniconOnBlack: var(--black);
+    --iconHalfOnBlack: rgba(255, 255, 255, 0.5);
+    --iconOnTertiary: #ffffff;
+    --oniconOnTertiary: #121212;
+    --oniconHalfOnTertiary: rgba(0, 0, 0, 0.5);
+    --iconOnGradient1: #121212;
+    --oniconOnGradient1: var(--white);
+    --iconHalfOnGradient1: rgba(18, 18, 18, 0.5);
+    --iconOnGradient2: #121212;
+    --oniconOnGradient2: var(--white);
+    --iconHalfOnGradient2: rgba(18, 18, 18, 0.5);
+    --iconOnGradient3: #121212;
+    --oniconOnGradient3: #ffffff;
+    --oniconHalfOnGradient3: rgba(0, 0, 0, 0.5);
+    --icon: var(--Midnight-900);
+    --on-icon: #ffffff;
+    --icon-half: rgba(24, 22, 49, 0.5);
+    --dmiconOnWhite: #121212;
+    --dmoniconOnWhite: var(--dm-white);
+    --dmiconHalfOnWhite: rgba(18, 18, 18, 0.5);
+    --dmiconOnBlack: var(--dm-Midnight-400);
+    --dmoniconOnBlack: #121212;
+    --dmiconHalfOnBlack: rgba(123, 123, 139, 0.5);
+    --dmiconOnTertiary: rgba(255, 255, 255, 0.6);
+    --dmoniconOnTertiary: #121212;
+    --dmHalficonHalfOnTertiary: rgba(255, 255, 255, 0.3);
+    --dmiconOnGradient1: #121212;
+    --dmoniconOnGradient1: var(--dm-white);
+    --dmiconHalfOnGradient1: rgba(18, 18, 18, 0.5);
+    --dmiconOnGradient2: #121212;
+    --dmoniconOnGradient2: var(--dm-white);
+    --dmiconHalfOnGradient2: rgba(18, 18, 18, 0.5);
+    --dmiconOnGradient3: rgba(255, 255, 255, 0.6);
+    --dmoniconOnGradient3: #121212;
+    --dmHalficonHalfOnGradient3: rgba(255, 255, 255, 0.3);
+    --dm-icon: var(--dm-Midnight-400);
+    --dm-on-icon: #121212;
+    --dm-icon-half: rgba(123, 123, 139, 0.5);
+    --text-gradient-a: #d02670;
+    --on-text-gradient-a: #ffffff;
+    --dm-text-gradient-a: #d02670;
+    --dm-on-text-gradient-a: rgba(255, 255, 255, 0.6);
+    --text-gradient-b: #1c79b6;
+    --on-text-gradient-b: #ffffff;
+    --dm-text-gradient-b: #1c79b6;
+    --dm-on-text-gradient-b: rgba(255, 255, 255, 0.6);
+    --accent: #d02670;
+    --on-accent: #ffffff;
+    --dm-accent: #d02670;
+    --dm-on-accent: rgba(255, 255, 255, 0.6);
+    --accent-0: #f9e4ed;
+    --on-accent-0: #121212;
+    --accent-100: #f2c3d7;
+    --on-accent-100: #121212;
+    --accent-200: #eba1c1;
+    --on-accent-200: #121212;
+    --accent-300: #e37eaa;
+    --on-accent-300: #121212;
+    --accent-400: #db5891;
+    --on-accent-400: #121212;
+    --accent-500: #d02670;
+    --on-accent-500: #ffffff;
+    --accent-600: #ad1c55;
+    --on-accent-600: #ffffff;
+    --accent-700: #8c123c;
+    --on-accent-700: #ffffff;
+    --accent-800: #6c0923;
+    --on-accent-800: #ffffff;
+    --accent-900: #4e000c;
+    --on-accent-900: #ffffff;
+    --dm-accent-0: #e5bbcd;
+    --dm-on-accent-0: #121212;
+    --dm-accent-100: #dda6be;
+    --dm-on-accent-100: #121212;
+    --dm-accent-200: #d591ae;
+    --dm-on-accent-200: #121212;
+    --dm-accent-300: #cc7a9d;
+    --dm-on-accent-300: #121212;
+    --dm-accent-400: #c2608b;
+    --dm-on-accent-400: #121212;
+    --dm-accent-500: #d14c80;
+    --dm-on-accent-500: #121212;
+    --dm-accent-600: #861c3a;
+    --dm-on-accent-600: rgba(255, 255, 255, 0.6);
+    --dm-accent-700: #821232;
+    --dm-on-accent-700: rgba(255, 255, 255, 0.6);
+    --dm-accent-800: #6c0923;
+    --dm-on-accent-800: rgba(255, 255, 255, 0.6);
+    --dm-accent-900: #4e000c;
+    --dm-on-accent-900: rgba(255, 255, 255, 0.6);
+    --hotlink: #d02670;
+    --hotlink-visited: rgba(208, 38, 112, 0.7);
+    --hotlink-decoration: underline;
+    --hotlink-hover-decoration: none;
+    --hotlinkOnWhite: #d02670;
+    --hotlinkOnWhite-visited: rgba(208, 38, 112, 0.7);
+    --hotlinkOnWhite-decoration: underline;
+    --hotlinkOnWhite-hover-decoration: none;
+    --hotlinkOnBlack: #db5891;
+    --hotlinkOnBlack-visited: rgba(219, 88, 145, 0.7);
+    --hotlinkOnBlack-decoration: underline;
+    --hotlinkOnBlack-hover-decoration: none;
+    --hotlinkOnTertiary: #d02670;
+    --hotlinkOnTertiary-visited: rgba(208, 38, 112, 0.7);
+    --hotlinkOnTertiary-decoration: underline;
+    --hotlinkOnTertiary-hover-decoration: none;
+    --hotlinkOnGradient3: #121212;
+    --hotlinkOnGradient3-visited: rgba(0, 0, 0, 0.5);
+    --dm-hotlink: #db5891;
+    --dm-hotlink-visited: rgba(219, 88, 145, 0.7);
+    --dm-hotlink-decoration: underline;
+    --dm-hotlink-hover-decoration: none;
+    --dm-hotlinkOnWhite: #d02670;
+    --dm-hotlinkOnWhite-visited: rgba(208, 38, 112, 0.7);
+    --dm-hotlinkOnWhite-decoration: underline;
+    --dm-hotlinkOnWhite-hover-decoration: none;
+    --dm-hotlinkOnBlack: #db5891;
+    --dm-hotlinkOnBlack-visited: rgba(219, 88, 145, 0.7);
+    --dm-hotlinkOnBlack-decoration: underline;
+    --dm-hotlinkOnBlack-hover-decoration: none;
+    --dm-hotlinkOnTertiary: #d02670;
+    --dm-hotlinkOnTertiary-visited: rgba(208, 38, 112, 0.7);
+    --dm-hotlinkOnTertiary-decoration: underline;
+    --dm-hotlinkOnTertiary-hover-decoration: none;
+    --dm-hotlinkOnGradient3: #db5891;
+    --dm-hotlinkOnGradient3-visited: rgba(219, 88, 145, 0.7);
+    --input: rgba(255, 255, 255, 0.55);
+    --on-input: #121212;
+    --dm-input: rgba(155, 64, 103, 0.54);
+    --dm-on-input: rgba(255, 255, 255, 0.6);
+    --input-hover: rgba(255, 255, 255, 0.9);
+    --dm-input-hover: rgba(255, 255, 255, 0.12);
+}

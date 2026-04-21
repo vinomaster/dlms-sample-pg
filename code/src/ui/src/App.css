@@ -1,0 +1,329 @@
+.content {
+    /* align-items: center; */
+    padding-left: 10px;
+}
+
+.content .MuiIconButton-root {
+    margin: 8px 0 0 !important;
+}
+
+.detailDiv {
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 12px;
+}
+
+.detailHeaderDiv {
+    font-size: large;
+}
+
+.detailTable {
+    width: 100%;
+}
+
+.detailTable td {
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 4px;
+}
+
+.actionCol {
+    text-align: center;
+    padding-bottom: 4px;
+    padding-top: 4px;
+}
+
+.detailQuestion {
+    font-weight: bold;
+}
+
+.spacer {
+    padding-top: var(--spacing-3);
+}
+
+.viewAs .MuiFormControl-root {
+    /* width: unset !important; */
+    width: 191px !important;
+    /*right: 100px !important*/
+}
+
+.admin_button_div {
+    position: relative;
+    right: -40px;
+}
+
+.switch_div_details {
+    position: relative;
+    right: 11px;
+}
+
+.switch_div_list {
+    position: absolute;
+    right: 230px;
+}
+
+.switch_div_list button {
+    width: 255px !important;
+}
+
+.switch_div_details button {
+    width: 255px !important;
+}
+
+.switch_div_gear {
+    width: 25px;
+    height: 24px;
+    display: block;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: -171px -111px;
+    top: -62px;
+    right: -90px;
+    zoom: 2;
+}
+
+/* .switch_div_details_option_fadeout {
+  position: absolute;
+  background: #e4e4e4;
+  border-radius:1em;
+  z-index: 1;
+  opacity: 1;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-out;
+  max-width: 100%;
+  overflow:hidden;
+}
+
+.switch_div_details_option_fadein {
+  position: absolute;
+  background: #e4e4e4;
+  border-radius:1em;
+  z-index: 100;
+  opacity: 1;
+  transform: translateX(0);
+  transition: transform 0.3s ease-in;
+  overflow:hidden;
+} */
+
+.switch_div_details_option_fadeout {
+    position: absolute;
+    background: #e4e4e4;
+    border-radius: 1em;
+    z-index: 1;
+    opacity: 1;
+    width: 10% !important;
+    transition: width 0.5s;
+    overflow: hidden;
+}
+
+.switch_div_details_option_fadein {
+    position: absolute;
+    background: #e4e4e4;
+    border-radius: 1em;
+    z-index: 100;
+    opacity: 1;
+    width: 300px !important;
+    transition: width 0.5s;
+    overflow: hidden;
+}
+
+.switch_config_grouping div {
+    padding-top: 14px;
+    padding-left: 20px;
+}
+
+.editorDiv {
+}
+
+.editorDiv .MuiOutlinedInput-root {
+    border: none;
+}
+
+.App a {
+    cursor: pointer;
+}
+
+.wait * {
+    cursor: wait;
+}
+
+.attachmentsList .MuiIconButton-root {
+    margin: unset !important;
+    background: none !important;
+    color: var(--black) !important;
+}
+
+.attachmentItem {
+    border-radius: var(--radius-1);
+    border: 1px solid var(--border);
+    padding: 10px 0px 4px 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    background-color: var(--white);
+}
+
+.fileupload {
+    border-radius: var(--radius-1);
+    border: 1px solid var(--border);
+    padding: 20px 10px 20px 10px;
+    display: flex;
+    gap: 16px;
+    background-color: var(--white);
+    /* font-size: small; */
+    font-size: var(--CTA-FontSize);
+    cursor: copy;
+}
+
+.commentDiv {
+    border: var(--border-1) solid var(--border);
+    border-radius: var(--radius-1);
+    margin-bottom: 10px;
+    /* margin-left: 10px; */
+    /* margin-right: 10px; */
+    padding: 10px;
+}
+
+.commentDeleteButton {
+    float: right;
+    /* top: 10px; */
+    /* right: 10px; */
+}
+
+.roundedTable tr:last-child td:first-child,
+tr:last-child,
+.roundedTable {
+    border-bottom-left-radius: var(--radius-1);
+}
+.roundedTable tr:last-child td:last-child,
+tr:last-child,
+.roundedTable {
+    border-bottom-right-radius: var(--radius-1);
+}
+.roundedTable tr:first-child th:first-child,
+tr:first-child,
+.roundedTable {
+    border-top-left-radius: var(--radius-1);
+}
+.roundedTable tr:first-child th:last-child,
+tr:first-child,
+.roundedTable {
+    border-top-right-radius: var(--radius-1);
+}
+.roundedTable th {
+    background-color: var(--Slate-0);
+    color: var(--on-Slate-0);
+    padding: var(--spacing-2);
+}
+.roundedTable tr {
+    background-color: #f8f8f8;
+    color: var(--on-Slate-0);
+}
+.roundedTable td {
+    padding-left: var(--spacing-2);
+    padding-right: var(--spacing-2);
+}
+
+/* 
+input {
+    font-size: 16px;
+} */
+
+body.only-div * {
+    pointer-events: none;
+}
+
+body.only-div .only-show-div * {
+    pointer-events: all;
+}
+
+body.only-div .only-show-div {
+    outline: 9999px solid rgba(0, 0, 0, 0.5);
+}
+
+.metricsCard {
+    text-align: center;
+    width: 200px !important;
+    min-width: 200px !important;
+    padding: 0px !important;
+    margin: 20px !important;
+    box-shadow: none !important;
+    background-color: var(--Slate-0) !important;
+}
+
+.metricsCard h3 {
+    margin: 0px;
+}
+
+/* Secondary menu tabs */
+.MuiTabs-root.slate .MuiTab-root {
+    background: var(--Slate-0) !important;
+    color: var(--on-Slate-0) !important;
+    /* font-size: calc(var(--baseFont) * 1.1); */
+    font-size: var(--h4-fontSize);
+}
+
+.MuiTabs-root.slate .MuiTab-root::after {
+    border: none !important;
+    opacity: 0;
+}
+
+.MuiTabs-root.slate .MuiTab-root:hover::after {
+    border-bottom: var(--spacing-half) solid var(--buttonOnWhite) !important;
+    opacity: 0.5;
+}
+
+.MuiTabs-root.slate .MuiTabs-indicator {
+    background: var(--buttonOnWhite) !important;
+}
+
+.MuiTabs-root .MuiTabs-indicator {
+    background: var(--on-Slate-0) !important;
+}
+
+.slate {
+    background: var(--Slate-0) !important;
+    border-radius: var(--radius-1);
+    /* padding: var(--spacing-1); */
+    /* border: 1px solid var(--border); */
+}
+
+/* Fix bold & always on top for placeholder */
+.MuiFormControl-root .MuiFormLabel-root.MuiInputLabel-animated {
+    z-index: 0;
+}
+
+.MuiInputBase-root .MuiInputBase-input {
+    font-size: var(--CTA-SmallFontSize);
+}
+
+.MuiDateCalendar-root button {
+    background-color: var(--background) !important;
+    color: var(--on-background) !important;
+}
+
+.MuiInputAdornment-root {
+    height: auto !important;
+    max-height: unset !important;
+}
+
+/* buttonLink is meant to make a MUI Button
+ * look like a hotlink.  Used in the
+ * checklist.  Using button since
+ * hotlinks need a href or can't
+ * be tabbed to so using button
+ * in MUI Link
+ */
+button.MuiLink-root.buttonLink {
+    background: transparent !important;
+    color: var(--hotlink) !important;
+    text-decoration: var(--hotlink-decoration);
+    font: inherit;
+}
+button.MuiLink-root.buttonLink::after {
+    border: none;
+}
+button.MuiLink-root.buttonLink:hover {
+    text-decoration: var(--hotlink-hover-decoration);
+}
